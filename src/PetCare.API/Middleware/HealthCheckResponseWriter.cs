@@ -1,4 +1,7 @@
+using System.Linq;
 using System.Text.Json;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 
 namespace PetCare.API.Middleware;

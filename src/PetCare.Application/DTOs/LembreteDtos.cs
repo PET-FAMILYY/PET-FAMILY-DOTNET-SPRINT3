@@ -1,3 +1,5 @@
+using System;
+
 namespace PetCare.Application.DTOs;
 
 public record LembreteRequest(string Titulo, string? Descricao, DateTime DataLembrete, int PetId);

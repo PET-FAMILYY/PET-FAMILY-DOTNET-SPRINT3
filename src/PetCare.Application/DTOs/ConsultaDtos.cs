@@ -1,3 +1,5 @@
+using System;
+
 namespace PetCare.Application.DTOs;
 
 public record ConsultaRequest(DateTime DataConsulta, string? Observacoes, int PetId);

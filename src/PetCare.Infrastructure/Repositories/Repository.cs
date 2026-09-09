@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PetCare.Application.Interfaces;
 using PetCare.Domain.Common;
@@ -45,5 +47,5 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
     }
 
     public virtual async Task<bool> ExistsByIdAsync(int id)
-        => await DbSet.AnyAsync(e => EF.Property<int>(e, "Id") == id);
+        => (await DbSet.CountAsync(e => EF.Property<int>(e, "Id") == id)) > 0;
 }

@@ -1,5 +1,12 @@
+using System;
+using System.IO;
 using System.Reflection;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Hosting;
 using Microsoft.OpenApi;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
@@ -53,8 +60,7 @@ builder.Services.AddSwaggerGen(options =>
 // ---------- Persistência (EF Core + Oracle) ----------
 var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
 builder.Services.AddDbContext<PetCareContext>(options =>
-    options.UseOracle(connectionString, oracleOptions =>
-        oracleOptions.UseOracleSQLCompatibility(Oracle.EntityFrameworkCore.OracleSQLCompatibility.DatabaseVersion19)));
+    options.UseOracle(connectionString));
 
 // ---------- Repositórios ----------
 builder.Services.AddScoped<IRepository<Tutor>, TutorRepository>();

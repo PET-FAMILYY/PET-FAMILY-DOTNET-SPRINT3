@@ -1,3 +1,5 @@
+using System.Linq;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using PetCare.Application.Interfaces;
 using PetCare.Domain.Entities;
@@ -19,6 +21,6 @@ public class TutorRepository : Repository<Tutor>, ITutorRepository
         if (ignoreId.HasValue)
             query = query.Where(t => t.Id != ignoreId.Value);
 
-        return await query.AnyAsync();
+        return await query.CountAsync() > 0;
     }
 }

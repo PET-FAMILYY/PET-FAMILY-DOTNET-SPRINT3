@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.DependencyInjection.Extensions;
 using PetCare.Infrastructure.Persistence;
 
 namespace PetCare.IntegrationTests;
@@ -18,10 +20,14 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
         builder.ConfigureServices(services =>
         {
-            var descriptor = services.SingleOrDefault(
-                d => d.ServiceType == typeof(DbContextOptions<PetCareContext>));
-            if (descriptor is not null)
-                services.Remove(descriptor);
+            // Remove TODOS os descritores de configuracao do PetCareContext (Oracle),
+            // nao apenas o DbContextOptions<T>: a partir do EF Core 8+/9+ o AddDbContext
+            // tambem registra IDbContextOptionsConfiguration<T>, que compoe configuracoes
+            // em vez de sobrescrever. Sem remover isso, Oracle + InMemory ficam registrados
+            // juntos e o EF Core lanca "Only a single database provider can be registered".
+            services.RemoveAll<DbContextOptions<PetCareContext>>();
+            services.RemoveAll<DbContextOptions>();
+            services.RemoveAll<IDbContextOptionsConfiguration<PetCareContext>>();
 
             services.AddDbContext<PetCareContext>(options =>
                 options.UseInMemoryDatabase(DatabaseName));

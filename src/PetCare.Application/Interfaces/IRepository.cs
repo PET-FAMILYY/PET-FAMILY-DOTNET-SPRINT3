@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+using System.Threading.Tasks;
 using PetCare.Domain.Common;
 
 namespace PetCare.Application.Interfaces;
