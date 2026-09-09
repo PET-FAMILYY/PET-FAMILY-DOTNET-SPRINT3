@@ -104,7 +104,3 @@ dotnet test tests/PetCare.IntegrationTests
 - **Domain.Tests**: regras de negócio das entidades, sem mocks, padrão AAA.
 - **Application.Tests**: repositórios com `IRepository<T>` mockado (Moq) e `PetCareContext` isolado via EF Core InMemory por teste.
 - **IntegrationTests**: fluxo HTTP completo via `WebApplicationFactory<Program>`, com o Oracle substituído por InMemory apenas para o ambiente de teste (`CustomWebApplicationFactory`).
-
-## 7. Observação sobre este ambiente de geração
-
-Este projeto foi gerado por completo (código-fonte de todas as 7 camadas), porém o ambiente usado para gerá-lo **não tem acesso ao NuGet.org**, então não foi possível rodar `dotnet restore` / `dotnet build` / `dotnet test` aqui para validar a compilação de ponta a ponta. Rode os comandos da seção 6 no seu ambiente local (com acesso à internet) para restaurar os pacotes e confirmar o build.
