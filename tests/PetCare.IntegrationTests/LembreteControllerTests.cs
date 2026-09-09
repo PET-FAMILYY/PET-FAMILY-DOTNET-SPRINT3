@@ -15,7 +15,7 @@ public class LembreteControllerTests
 
     public LembreteControllerTests(CustomWebApplicationFactory factory)
     {
-        _client = factory.CreateClient();
+        _client = factory.CreateAuthenticatedClient();
     }
 
     private async Task<int> CriarPetAsync()

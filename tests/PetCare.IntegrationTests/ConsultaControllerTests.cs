@@ -15,7 +15,7 @@ public class ConsultaControllerTests
 
     public ConsultaControllerTests(CustomWebApplicationFactory factory)
     {
-        _client = factory.CreateClient();
+        _client = factory.CreateAuthenticatedClient();
     }
 
     private async Task<int> CriarPetAsync()

@@ -15,7 +15,7 @@ public class PetControllerTests
 
     public PetControllerTests(CustomWebApplicationFactory factory)
     {
-        _client = factory.CreateClient();
+        _client = factory.CreateAuthenticatedClient();
     }
 
     private async Task<int> CriarTutorAsync()
