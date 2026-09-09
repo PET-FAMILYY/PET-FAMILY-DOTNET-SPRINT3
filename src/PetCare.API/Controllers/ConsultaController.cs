@@ -1,7 +1,4 @@
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using PetCare.Application.DTOs;
 using PetCare.Application.Interfaces;
@@ -13,6 +10,7 @@ namespace PetCare.API.Controllers;
 /// <summary>
 /// Gerencia consultas veterinárias associadas a um pet.
 /// </summary>
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 [Produces("application/json")]

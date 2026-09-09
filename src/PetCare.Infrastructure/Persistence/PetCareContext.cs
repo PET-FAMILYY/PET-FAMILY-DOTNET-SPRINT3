@@ -11,6 +11,8 @@ public class PetCareContext : DbContext
     public DbSet<Pet> Pets => Set<Pet>();
     public DbSet<Consulta> Consultas => Set<Consulta>();
     public DbSet<Lembrete> Lembretes => Set<Lembrete>();
+    
+    public DbSet<Usuario> Usuarios => Set<Usuario>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

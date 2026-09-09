@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc.Testing;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
@@ -10,7 +11,9 @@ namespace PetCare.IntegrationTests;
 /// <summary>
 /// Fábrica customizada de WebApplicationFactory que substitui o PetCareContext
 /// (Oracle) por um provider EF Core InMemory isolado por instância de teste,
-/// permitindo validar o pipeline HTTP completo sem depender de um banco real.
+/// e substitui a autenticação JWT por um esquema fake que autentica automaticamente
+/// todas as requisições, permitindo validar o pipeline HTTP completo (incluindo
+/// [Authorize]) sem depender de um banco real nem de tokens JWT reais.
 /// </summary>
 public class CustomWebApplicationFactory : WebApplicationFactory<Program>
 {
@@ -20,17 +23,18 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
     {
         builder.ConfigureServices(services =>
         {
-            // Remove TODOS os descritores de configuracao do PetCareContext (Oracle),
-            // nao apenas o DbContextOptions<T>: a partir do EF Core 8+/9+ o AddDbContext
-            // tambem registra IDbContextOptionsConfiguration<T>, que compoe configuracoes
-            // em vez de sobrescrever. Sem remover isso, Oracle + InMemory ficam registrados
-            // juntos e o EF Core lanca "Only a single database provider can be registered".
+            // ---------- Banco InMemory no lugar do Oracle ----------
             services.RemoveAll<DbContextOptions<PetCareContext>>();
             services.RemoveAll<DbContextOptions>();
             services.RemoveAll<IDbContextOptionsConfiguration<PetCareContext>>();
 
             services.AddDbContext<PetCareContext>(options =>
                 options.UseInMemoryDatabase(DatabaseName));
+
+            // ---------- Autenticação fake no lugar do JWT ----------
+            services.AddAuthentication(defaultScheme: TestAuthHandler.SchemeName)
+                .AddScheme<AuthenticationSchemeOptions, TestAuthHandler>(
+                    TestAuthHandler.SchemeName, options => { });
         });
     }
 

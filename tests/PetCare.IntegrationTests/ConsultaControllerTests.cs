@@ -8,7 +8,8 @@ using Xunit;
 
 namespace PetCare.IntegrationTests;
 
-public class ConsultaControllerTests : IClassFixture<CustomWebApplicationFactory>
+[Collection("IntegrationTests")]
+public class ConsultaControllerTests
 {
     private readonly HttpClient _client;
 

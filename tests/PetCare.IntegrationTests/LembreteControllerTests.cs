@@ -8,7 +8,8 @@ using Xunit;
 
 namespace PetCare.IntegrationTests;
 
-public class LembreteControllerTests : IClassFixture<CustomWebApplicationFactory>
+[Collection("IntegrationTests")]
+public class LembreteControllerTests
 {
     private readonly HttpClient _client;
 
