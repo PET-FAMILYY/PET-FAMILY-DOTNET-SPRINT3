@@ -1,19 +1,14 @@
-using System;
-using System.IO;
 using System.Reflection;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
+using PetCare.API.HealthChecks;
 using PetCare.API.Middleware;
 using PetCare.Application.Interfaces;
 using PetCare.Domain.Entities;
@@ -21,7 +16,6 @@ using PetCare.Infrastructure.Persistence;
 using PetCare.Infrastructure.Repositories;
 using PetCare.Infrastructure.Security;
 using Serilog;
-using Serilog.Enrichers.CorrelationId;
 
 const string ServiceName = "PetCare.API";
 
@@ -100,13 +94,19 @@ builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
 builder.Services.AddProblemDetails();
 
 // ---------- Health Checks ----------
+builder.Services.AddHttpClient(ExternalServiceHealthCheck.HttpClientName);
+
 builder.Services.AddHealthChecks()
-    .AddCheck("self", () => Microsoft.Extensions.Diagnostics.HealthChecks.HealthCheckResult.Healthy("API no ar."), tags: new[] { "live" })
+    .AddCheck("self", () => HealthCheckResult.Healthy("API no ar."), tags: new[] { "live" })
     .AddOracle(
         connectionString ?? string.Empty,
         name: "oracle_database",
-        failureStatus: Microsoft.Extensions.Diagnostics.HealthChecks.HealthStatus.Unhealthy,
-        tags: new[] { "ready", "db" });
+        failureStatus: HealthStatus.Unhealthy,
+        tags: new[] { "ready", "db" })
+    .AddCheck<ExternalServiceHealthCheck>(
+        "external_service",
+        failureStatus: HealthStatus.Degraded,
+        tags: new[] { "ready", "external" });
 
 // ---------- OpenTelemetry (tracing + métricas Prometheus em /metrics) ----------
 builder.Services.AddOpenTelemetry()
