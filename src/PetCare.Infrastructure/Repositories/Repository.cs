@@ -1,6 +1,8 @@
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using PetCare.Application.Common;
 using PetCare.Application.Interfaces;
 using PetCare.Domain.Common;
 using PetCare.Infrastructure.Persistence;
@@ -23,6 +25,24 @@ public class Repository<T> : IRepository<T> where T : BaseEntity
 
     public virtual async Task<IEnumerable<T>> GetAllAsync()
         => await DbSet.AsNoTracking().ToListAsync();
+    
+    public virtual async Task<PagedResult<T>> GetPagedAsync(QueryParameters query, Expression<Func<T, bool>>? filter = null)
+    {
+        IQueryable<T> source = DbSet.AsNoTracking();
+
+        if (filter is not null)
+            source = source.Where(filter);
+
+        var total = await source.CountAsync();
+
+        var items = await source
+            .OrderByProperty(query.SortBy, query.Descending)
+            .Skip((query.Page - 1) * query.PageSize)
+            .Take(query.PageSize)
+            .ToListAsync();
+
+        return new PagedResult<T>(items, query.Page, query.PageSize, total);
+    }
 
     public virtual async Task<T?> GetByIdAsync(int id)
         => await DbSet.FindAsync(id);
