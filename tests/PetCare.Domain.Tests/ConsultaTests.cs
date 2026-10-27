@@ -1,4 +1,3 @@
-using System;
 using PetCare.Domain.Entities;
 using PetCare.Domain.Exceptions;
 using Xunit;

@@ -9,6 +9,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Microsoft.IdentityModel.Tokens;
 using PetCare.Infrastructure.Persistence;
+using Microsoft.Extensions.Diagnostics.HealthChecks;
+using PetCare.Application.Auditing;
 
 namespace PetCare.IntegrationTests;
 
@@ -29,6 +31,16 @@ public class CustomWebApplicationFactory : WebApplicationFactory<Program>
             services.RemoveAll<DbContextOptions<PetCareContext>>();
             services.RemoveAll<DbContextOptions>();
             services.RemoveAll<IDbContextOptionsConfiguration<PetCareContext>>();
+            services.RemoveAll<IAuditLogRepository>();
+            services.AddSingleton<IAuditLogRepository, InMemoryAuditLogRepository>();   
+            
+            services.Configure<HealthCheckServiceOptions>(options =>
+            {
+                var manter = options.Registrations.Where(r => r.Name == "self").ToList();
+                options.Registrations.Clear();
+                foreach (var registro in manter)
+                    options.Registrations.Add(registro);
+            });
 
             services.AddDbContext<PetCareContext>(options =>
                 options.UseInMemoryDatabase(DatabaseName));

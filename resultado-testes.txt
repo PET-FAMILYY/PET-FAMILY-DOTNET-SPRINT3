@@ -1,29 +1,51 @@
   Determinando os projetos a serem restaurados...
-C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-23rf-6693-g89p [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1903: O pacote 'Microsoft.OpenApi' 2.4.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1903: O pacote 'Microsoft.OpenApi' 2.4.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.Application.Tests\PetCare.Application.Tests.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7 [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7 [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1902: O pacote 'OpenTelemetry.Api' 1.11.2 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g94r-2vxg-569j [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1902: O pacote 'OpenTelemetry.Api' 1.11.2 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g94r-2vxg-569j [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7 [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.Application.Tests\PetCare.Application.Tests.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7 [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-23rf-6693-g89p [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-37gx-xxp4-5rgx [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-6588-8gv4-xfgh [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-7hqp-7c5m-4vq6 [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-8q5v-6pqq-x66h [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-c399-9853-6jmj [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-cvvh-rhrc-wg4q [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g8r8-53c2-pm3f [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-mmjf-rqrv-855v [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
-C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1903: O pacote 'Microsoft.OpenApi' 2.4.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-r955-8q5j-3h83 [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
-C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1902: O pacote 'OpenTelemetry.Api' 1.11.2 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g94r-2vxg-569j [C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\PetCareAPI.sln]
   Todos os projetos estão atualizados para restauração.
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1903: O pacote 'Microsoft.OpenApi' 2.4.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1902: O pacote 'OpenTelemetry.Api' 1.11.2 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g94r-2vxg-569j
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\PetCare.IntegrationTests.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.Application.Tests\PetCare.Application.Tests.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.Application.Tests\PetCare.Application.Tests.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 8.0.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-23rf-6693-g89p
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-37gx-xxp4-5rgx
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-6588-8gv4-xfgh
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-7hqp-7c5m-4vq6
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-8q5v-6pqq-x66h
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-c399-9853-6jmj
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-cvvh-rhrc-wg4q
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g8r8-53c2-pm3f
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-mmjf-rqrv-855v
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-r955-8q5j-3h83
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\PetCare.Infrastructure.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Xml' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-w3x6-4m5h-cxqf
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1903: O pacote 'Microsoft.OpenApi' 2.4.1 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-v5pm-xwqc-g5wc
 C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1902: O pacote 'OpenTelemetry.Api' 1.11.2 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-g94r-2vxg-569j
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1902: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma moderado vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-2fmv-rv2c-59x7
+C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\PetCare.API.csproj : warning NU1903: O pacote 'System.Security.Cryptography.Pkcs' 9.0.0 tem uma alta vulnerabilidade de gravidade conhecida, https://github.com/advisories/GHSA-846f-f764-76mx
   PetCare.Domain -> C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\bin\Debug\net10.0\PetCare.Domain.dll
   PetCare.Application -> C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\bin\Debug\net10.0\PetCare.Application.dll
   PetCare.Domain.Tests -> C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.Domain.Tests\bin\Debug\net10.0\PetCare.Domain.Tests.dll
@@ -32,14 +54,1690 @@ Execução de teste para C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCar
 1 arquivos de teste no total corresponderam ao padrão especificado.
   PetCare.Application.Tests -> C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.Application.Tests\bin\Debug\net10.0\PetCare.Application.Tests.dll
 Execução de teste para C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.Application.Tests\bin\Debug\net10.0\PetCare.Application.Tests.dll (.NETCoreApp,Version=v10.0)
-1 arquivos de teste no total corresponderam ao padrão especificado.
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 10.0.11)
   PetCare.API -> C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\bin\Debug\net10.0\PetCare.API.dll
+[xUnit.net 00:00:00.10]   Discovering: PetCare.Domain.Tests
+[xUnit.net 00:00:00.19]   Discovered:  PetCare.Domain.Tests
+[xUnit.net 00:00:00.20]   Starting:    PetCare.Domain.Tests
+1 arquivos de teste no total corresponderam ao padrão especificado.
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_NomeInvalido_LancaDomainException(nome: "", especie: "Cachorro") [64 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_EmailInvalido_LancaDomainException(email: "") [64 ms]
+  Aprovado PetCare.Domain.Tests.ConsultaTests.Construtor_DataConsultaInvalida_LancaDomainException [64 ms]
+  Aprovado PetCare.Domain.Tests.LembreteTests.Construtor_TituloInvalido_LancaDomainException(titulo: null) [64 ms]
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_NomeInvalido_LancaDomainException(nome: null, especie: "Cachorro") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.LembreteTests.Construtor_TituloInvalido_LancaDomainException(titulo: " ") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.LembreteTests.Construtor_TituloInvalido_LancaDomainException(titulo: "") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_NomeInvalido_LancaDomainException(nome: " ", especie: "Cachorro") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.ConsultaTests.Atualizar_DadosValidos_AtualizaCamposComSucesso [1 ms]
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_DadosValidos_CriaPetComSucesso [5 ms]
+  Aprovado PetCare.Domain.Tests.LembreteTests.Construtor_DadosValidos_CriaLembreteComSucesso [5 ms]
+  Aprovado PetCare.Domain.Tests.ConsultaTests.Construtor_DadosValidos_CriaConsultaComSucesso [4 ms]
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_DataNascimentoFutura_LancaDomainException [< 1 ms]
+  Aprovado PetCare.Domain.Tests.LembreteTests.Construtor_DataLembreteAnteriorAtual_LancaDomainException [< 1 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_EmailInvalido_LancaDomainException(email: "mariaemail.com") [6 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_EmailInvalido_LancaDomainException(email: " ") [< 1 ms]
+[xUnit.net 00:00:00.39]   Finished:    PetCare.Domain.Tests
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_EmailInvalido_LancaDomainException(email: "maria@") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_EspecieInvalida_LancaDomainException(nome: "Rex", especie: " ") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_NomeInvalido_LancaDomainException(nome: null, email: "maria@email.com") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_EspecieInvalida_LancaDomainException(nome: "Rex", especie: null) [6 ms]
+  Aprovado PetCare.Domain.Tests.PetTests.Construtor_EspecieInvalida_LancaDomainException(nome: "Rex", especie: "") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_NomeInvalido_LancaDomainException(nome: " ", email: "maria@email.com") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_NomeInvalido_LancaDomainException(nome: "", email: "maria@email.com") [< 1 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Atualizar_DadosValidos_AtualizaCamposComSucesso [< 1 ms]
+  Aprovado PetCare.Domain.Tests.TutorTests.Construtor_DadosValidos_CriaTutorComSucesso [< 1 ms]
 
-Aprovado!  – Com falha:     0, Aprovado:    25, Ignorado:     0, Total:    25, Duração: 64 ms - PetCare.Domain.Tests.dll (net10.0)
+Execução de Teste Bem-sucedida.
+Total de testes: 25
+     Aprovados: 25
+Tempo total: 1,3216 Segundos
   PetCare.IntegrationTests -> C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\bin\Debug\net10.0\PetCare.IntegrationTests.dll
 Execução de teste para C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\tests\PetCare.IntegrationTests\bin\Debug\net10.0\PetCare.IntegrationTests.dll (.NETCoreApp,Version=v10.0)
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 10.0.11)
 1 arquivos de teste no total corresponderam ao padrão especificado.
+[xUnit.net 00:00:00.51]   Discovering: PetCare.Application.Tests
+[xUnit.net 00:00:00.61]   Discovered:  PetCare.Application.Tests
+[xUnit.net 00:00:00.62]   Starting:    PetCare.Application.Tests
+  Aprovado PetCare.Application.Tests.PetServiceTests.ListarAsync_RepassaFiltroEMapeiaPagina [293 ms]
+  Aprovado PetCare.Application.Tests.ConsultaServiceTests.ObterAsync_ConsultaInexistente_LancaResourceNotFoundException [284 ms]
+  Aprovado PetCare.Application.Tests.PetServiceTests.ObterAsync_PetInexistente_LancaResourceNotFoundException [3 ms]
+  Aprovado PetCare.Application.Tests.LembreteServiceTests.CriarAsync_DadosValidos_PersisteERegistraAuditoria [291 ms]
+  Aprovado PetCare.Application.Tests.LembreteServiceTests.ObterAsync_LembreteInexistente_LancaResourceNotFoundException [2 ms]
+  Aprovado PetCare.Application.Tests.PetServiceTests.AtualizarAsync_PetExistente_AtualizaERegistraAuditoria [5 ms]
+  Aprovado PetCare.Application.Tests.LembreteServiceTests.CriarAsync_DataNoPassado_LancaDomainExceptionENaoPersiste [2 ms]
+  Aprovado PetCare.Application.Tests.PetServiceTests.CriarAsync_DataNascimentoFutura_LancaDomainExceptionENaoPersiste [3 ms]
+  Aprovado PetCare.Application.Tests.TutorServiceTests.CriarAsync_EmailNovo_PersisteERegistraAuditoria [289 ms]
+  Aprovado PetCare.Application.Tests.LembreteServiceTests.AtualizarAsync_LembreteExistente_AtualizaERegistraAuditoria [4 ms]
+  Aprovado PetCare.Application.Tests.PetServiceTests.RemoverAsync_PetExistente_RemoveERegistraAuditoria [3 ms]
+  Aprovado PetCare.Application.Tests.TutorServiceTests.CriarAsync_EmailDuplicado_LancaConflictExceptionENaoPersiste [2 ms]
+  Aprovado PetCare.Application.Tests.LembreteServiceTests.RemoverAsync_LembreteExistente_RemoveERegistraAuditoria [3 ms]
+  Aprovado PetCare.Application.Tests.PetServiceTests.CriarAsync_DadosValidos_PersistePetERegistraAuditoria [3 ms]
+  Aprovado PetCare.Application.Tests.TutorServiceTests.ObterAsync_TutorInexistente_LancaResourceNotFoundException [2 ms]
+  Aprovado PetCare.Application.Tests.ConsultaServiceTests.ListarAsync_MapeiaPaginaDoRepositorio [32 ms]
+  Aprovado PetCare.Application.Tests.ConsultaServiceTests.CriarAsync_DadosValidos_PersisteERegistraAuditoria [5 ms]
+  Aprovado PetCare.Application.Tests.ConsultaServiceTests.RemoverAsync_ConsultaExistente_RemoveERegistraAuditoria [5 ms]
+  Aprovado PetCare.Application.Tests.TutorServiceTests.AtualizarAsync_EmailDeOutroTutor_LancaConflictException [35 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_PageSizeFicaDentroDoLimite(informado: 0, esperado: 1) [6 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_PageSizeFicaDentroDoLimite(informado: 20, esperado: 20) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_PageSizeFicaDentroDoLimite(informado: 1000, esperado: 50) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.TotalPages_CalculaPaginasCorretamente(total: 95, pageSize: 10, esperado: 10) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.TotalPages_CalculaPaginasCorretamente(total: 11, pageSize: 10, esperado: 2) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.TotalPages_CalculaPaginasCorretamente(total: 0, pageSize: 10, esperado: 0) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.TotalPages_CalculaPaginasCorretamente(total: 10, pageSize: 10, esperado: 1) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_PageNaoPodeSerMenorQueUm(informado: 3, esperado: 3) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_PageNaoPodeSerMenorQueUm(informado: -5, esperado: 1) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_PageNaoPodeSerMenorQueUm(informado: 0, esperado: 1) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_Descending_ReconheceDirecao(direcao: "desc", esperado: True) [3 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_Descending_ReconheceDirecao(direcao: "DESC", esperado: True) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.QueryParameters_Descending_ReconheceDirecao(direcao: "asc", esperado: False) [< 1 ms]
+  Aprovado PetCare.Application.Tests.PagedResultTests.Map_PreservaMetadadosETransformaItens [16 ms]
+  Aprovado PetCare.Application.Tests.LembreteServiceTests.ListarAsync_RepassaFiltroEMapeiaPagina [82 ms]
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v2.8.2+699d445a1a (64-bit .NET 10.0.11)
+[xUnit.net 00:00:00.48]   Discovering: PetCare.IntegrationTests
+[xUnit.net 00:00:00.54]   Discovered:  PetCare.IntegrationTests
+[xUnit.net 00:00:00.55]   Starting:    PetCare.IntegrationTests
+  Aprovado PetCare.Application.Tests.LembreteRepositoryTests.AddAsync_PetInexistente_LancaResourceNotFoundExceptionENaoPersiste [1 s]
+  Aprovado PetCare.Application.Tests.ConsultaRepositoryTests.AddAsync_PetInexistente_LancaResourceNotFoundExceptionENaoPersiste [788 ms]
+  Aprovado PetCare.Application.Tests.ConsultaRepositoryTests.AddAsync_PetExistente_PersisteConsultaComSucesso [69 ms]
+  Aprovado PetCare.Application.Tests.LembreteRepositoryTests.AddAsync_PetExistente_PersisteLembreteComSucesso [69 ms]
+  Aprovado PetCare.Application.Tests.TutorRepositoryTests.ExistsByEmailAsync_EmailJaCadastrado_RetornaTrue [1 s]
+  Aprovado PetCare.Application.Tests.PetRepositoryTests.GetByTutorIdAsync_PetsCadastrados_RetornaSomentePetsDoTutor [890 ms]
+  Aprovado PetCare.Application.Tests.TutorRepositoryTests.GetByEmailAsync_EmailInexistente_RetornaNulo [13 ms]
+  Aprovado PetCare.Application.Tests.PetRepositoryTests.AddAsync_TutorInexistente_LancaResourceNotFoundExceptionENaoPersiste [7 ms]
+[xUnit.net 00:00:01.97]   Finished:    PetCare.Application.Tests
+  Aprovado PetCare.Application.Tests.PetRepositoryTests.AddAsync_TutorExistente_PersistePetComSucesso [4 ms]
+  Aprovado PetCare.Application.Tests.RepositoryPagingTests.GetPagedAsync_SegundaPagina_RetornaItensCorretosETotal [1 s]
+  Aprovado PetCare.Application.Tests.TutorRepositoryTests.ExistsByEmailAsync_IgnorandoProprioId_RetornaFalse [10 ms]
+  Aprovado PetCare.Application.Tests.RepositoryPagingTests.GetPagedAsync_OrdenacaoDescendente_InverteOrdem [8 ms]
+  Aprovado PetCare.Application.Tests.RepositoryPagingTests.GetPagedAsync_ComFiltro_AplicaPredicadoAntesDaPaginacao [23 ms]
+  Aprovado PetCare.Application.Tests.RepositoryPagingTests.GetPagedAsync_CampoDeOrdenacaoInvalido_LancaArgumentException [2 ms]
 
-Aprovado!  – Com falha:     0, Aprovado:    10, Ignorado:     0, Total:    10, Duração: 1 s - PetCare.Application.Tests.dll (net10.0)
+Execução de Teste Bem-sucedida.
+Total de testes: 48
+     Aprovados: 48
+Tempo total: 2,9239 Segundos
+  Aprovado PetCare.IntegrationTests.ExternalServiceHealthCheckTests.CheckHealthAsync_ServicoResponde200_RetornaHealthy [16 ms]
+  Aprovado PetCare.IntegrationTests.ExternalServiceHealthCheckTests.CheckHealthAsync_ServicoLancaExcecao_RetornaDegradedSemPropagar [1 ms]
+  Aprovado PetCare.IntegrationTests.ExternalServiceHealthCheckTests.CheckHealthAsync_ServicoResponde500_RetornaDegraded [< 1 ms]
+[13:14:45 WRN] (d7eaa4ca-da74-467a-8cb8-7725b59a68ef) Failed to determine the https port for redirect.
+[13:14:45 ERR] (d7eaa4ca-da74-467a-8cb8-7725b59a68ef) HTTP GET /api/consulta/999999 responded 500 in 700.8143 ms
+PetCare.Domain.Exceptions.ResourceNotFoundException: Consulta com Id 999999 n�o foi encontrada.
+   at PetCare.Application.Services.ConsultaService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\ConsultaService.cs:line 65
+   at PetCare.Application.Services.ConsultaService.ObterAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\ConsultaService.cs:line 38
+   at PetCare.API.Controllers.ConsultaController.GetById(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\ConsultaController.cs:line 51
+   at lambda_method94(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:45 ERR] (d7eaa4ca-da74-467a-8cb8-7725b59a68ef) Erro n�o tratado (404) na requisi��o 0HNPK8LL4I2OJ: Consulta com Id 999999 n�o foi encontrada.
+PetCare.Domain.Exceptions.ResourceNotFoundException: Consulta com Id 999999 n�o foi encontrada.
+   at PetCare.Application.Services.ConsultaService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\ConsultaService.cs:line 65
+   at PetCare.Application.Services.ConsultaService.ObterAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\ConsultaService.cs:line 38
+   at PetCare.API.Controllers.ConsultaController.GetById(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\ConsultaController.cs:line 51
+   at lambda_method94(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            47a31f2d3419fc16381ed64ac1a78f65
+Activity.SpanId:             063c0c7b0cf3a635
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Consulta/{id:int}
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:45.0416143Z
+Activity.Duration:           00:00:00.7956112
+Activity.Tags:
+    server.address: localhost
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/consulta/999999
+    network.protocol.version: 1.1
+    http.route: api/Consulta/{id:int}
+    http.response.status_code: 404
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (f8c43821-5623-4436-bd14-f8a525f67359) HTTP POST /api/tutor responded 201 in 170.3587 ms
+Activity.TraceId:            efb5704ba29931ea1aa5b6f992443af9
+Activity.SpanId:             a9d8e05c9f1813c5
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:45.8523028Z
+Activity.Duration:           00:00:00.1733147
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (ca765915-db5c-497a-9991-0cc882640489) HTTP POST /api/pet responded 201 in 64.3218 ms
+Activity.TraceId:            e6e539b824ae6ac58fd3a7acdfab572f
+Activity.SpanId:             26654db1e61133fc
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.0362917Z
+Activity.Duration:           00:00:00.0648812
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (888a31b2-ff47-4067-8d9a-29a8b16771c0) HTTP POST /api/consulta responded 201 in 22.9379 ms
+Activity.TraceId:            850d316112eae02ab071af0e01598628
+Activity.SpanId:             8c868cd753802d85
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Consulta
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1050209Z
+Activity.Duration:           00:00:00.0232979
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/consulta
+    network.protocol.version: 1.1
+    http.route: api/Consulta
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (1c7c3165-2cc8-4bfa-93af-b5009aa77798) HTTP POST /api/consulta responded 500 in 7.6780 ms
+PetCare.Domain.Exceptions.ResourceNotFoundException: Pet com Id 999999 n�o foi encontrado.
+   at PetCare.Infrastructure.Repositories.ConsultaRepository.ValidarPetExistenteAsync(Int32 petId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\ConsultaRepository.cs:line 41
+   at PetCare.Infrastructure.Repositories.ConsultaRepository.AddAsync(Consulta entity) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\ConsultaRepository.cs:line 27
+   at PetCare.Application.Services.ConsultaService.CriarAsync(ConsultaRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\ConsultaService.cs:line 43
+   at PetCare.API.Controllers.ConsultaController.Create(ConsultaRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\ConsultaController.cs:line 64
+   at lambda_method265(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (1c7c3165-2cc8-4bfa-93af-b5009aa77798) Erro n�o tratado (404) na requisi��o 0HNPK8LL4I2ON: Pet com Id 999999 n�o foi encontrado.
+PetCare.Domain.Exceptions.ResourceNotFoundException: Pet com Id 999999 n�o foi encontrado.
+   at PetCare.Infrastructure.Repositories.ConsultaRepository.ValidarPetExistenteAsync(Int32 petId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\ConsultaRepository.cs:line 41
+   at PetCare.Infrastructure.Repositories.ConsultaRepository.AddAsync(Consulta entity) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\ConsultaRepository.cs:line 27
+   at PetCare.Application.Services.ConsultaService.CriarAsync(ConsultaRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\ConsultaService.cs:line 43
+   at PetCare.API.Controllers.ConsultaController.Create(ConsultaRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\ConsultaController.cs:line 64
+   at lambda_method265(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            27125bbd75f5d2bfbabf48c1e4ddeae1
+Activity.SpanId:             0c72dcbe7513d006
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Consulta
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1304752Z
+Activity.Duration:           00:00:00.0190483
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/consulta
+    network.protocol.version: 1.1
+    http.route: api/Consulta
+    http.response.status_code: 404
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (02b60f67-301e-47fd-9f50-bc41b549f5f6) HTTP POST /api/tutor responded 201 in 1.9939 ms
+Activity.TraceId:            58213c686a398452ccd4ef18058e40d1
+Activity.SpanId:             745e1d4cf7cae49d
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1526366Z
+Activity.Duration:           00:00:00.0022365
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (2197af4e-d506-47c3-a8af-40dcdb29deb2) HTTP POST /api/pet responded 201 in 1.5799 ms
+Activity.TraceId:            f356d2d98ee5c33714720a07339ddb47
+Activity.SpanId:             11bbf6bd3bcd8634
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1554593Z
+Activity.Duration:           00:00:00.0019601
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (a76cbfa2-17e6-4698-a39d-061268be6306) HTTP POST /api/lembrete responded 500 in 8.1574 ms
+PetCare.Domain.Exceptions.DomainException: A data do lembrete n�o pode ser anterior � data atual.
+   at PetCare.Domain.Entities.Lembrete.ValidarDataLembrete(DateTime dataLembrete) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Lembrete.cs:line 49
+   at PetCare.Domain.Entities.Lembrete..ctor(String titulo, String descricao, DateTime dataLembrete, Int32 petId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Lembrete.cs:line 22
+   at PetCare.Application.Services.LembreteService.CriarAsync(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\LembreteService.cs:line 44
+   at PetCare.API.Controllers.LembreteController.Create(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\LembreteController.cs:line 64
+   at lambda_method318(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (a76cbfa2-17e6-4698-a39d-061268be6306) Erro n�o tratado (400) na requisi��o 0HNPK8LL4I2OQ: A data do lembrete n�o pode ser anterior � data atual.
+PetCare.Domain.Exceptions.DomainException: A data do lembrete n�o pode ser anterior � data atual.
+   at PetCare.Domain.Entities.Lembrete.ValidarDataLembrete(DateTime dataLembrete) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Lembrete.cs:line 49
+   at PetCare.Domain.Entities.Lembrete..ctor(String titulo, String descricao, DateTime dataLembrete, Int32 petId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Lembrete.cs:line 22
+   at PetCare.Application.Services.LembreteService.CriarAsync(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\LembreteService.cs:line 44
+   at PetCare.API.Controllers.LembreteController.Create(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\LembreteController.cs:line 64
+   at lambda_method318(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            ac23adbd9b5645a483885a948a601b9d
+Activity.SpanId:             1e627ed2d47add0f
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Lembrete
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1595877Z
+Activity.Duration:           00:00:00.0175973
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/lembrete
+    network.protocol.version: 1.1
+    http.route: api/Lembrete
+    http.response.status_code: 400
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (e34fd6a8-8f4f-4eae-89da-9c697145528f) HTTP POST /api/lembrete responded 500 in 2.8091 ms
+PetCare.Domain.Exceptions.ResourceNotFoundException: Pet com Id 999999 n�o foi encontrado.
+   at PetCare.Infrastructure.Repositories.LembreteRepository.ValidarPetExistenteAsync(Int32 petId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\LembreteRepository.cs:line 41
+   at PetCare.Infrastructure.Repositories.LembreteRepository.AddAsync(Lembrete entity) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\LembreteRepository.cs:line 27
+   at PetCare.Application.Services.LembreteService.CriarAsync(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\LembreteService.cs:line 45
+   at PetCare.API.Controllers.LembreteController.Create(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\LembreteController.cs:line 64
+   at lambda_method318(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (e34fd6a8-8f4f-4eae-89da-9c697145528f) Erro n�o tratado (404) na requisi��o 0HNPK8LL4I2OR: Pet com Id 999999 n�o foi encontrado.
+PetCare.Domain.Exceptions.ResourceNotFoundException: Pet com Id 999999 n�o foi encontrado.
+   at PetCare.Infrastructure.Repositories.LembreteRepository.ValidarPetExistenteAsync(Int32 petId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\LembreteRepository.cs:line 41
+   at PetCare.Infrastructure.Repositories.LembreteRepository.AddAsync(Lembrete entity) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\LembreteRepository.cs:line 27
+   at PetCare.Application.Services.LembreteService.CriarAsync(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\LembreteService.cs:line 45
+   at PetCare.API.Controllers.LembreteController.Create(LembreteRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\LembreteController.cs:line 64
+   at lambda_method318(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            6c9181ae87a82bbd07a682e65c0d4d81
+Activity.SpanId:             4b65c286bf04f7cb
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Lembrete
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1791147Z
+Activity.Duration:           00:00:00.0050786
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/lembrete
+    network.protocol.version: 1.1
+    http.route: api/Lembrete
+    http.response.status_code: 404
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (b71d7ef8-c1f5-4152-a1e0-e8f21db7b179) HTTP POST /api/tutor responded 201 in 2.7472 ms
+Activity.TraceId:            8cf207d81cd6cef185fc7a0807716f7e
+Activity.SpanId:             41b3bed3a538d775
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1863281Z
+Activity.Duration:           00:00:00.0030133
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (c69d12fa-e278-426f-ad9e-47212a744058) HTTP POST /api/pet responded 201 in 2.7422 ms
+Activity.TraceId:            52d66f2c1fbdd15fc69cec0eb4907c3d
+Activity.SpanId:             7bc639ff50d55bfa
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1941786Z
+Activity.Duration:           00:00:00.0029871
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (cc0750f3-c2e9-417e-ae0a-7763e6f1b8b4) HTTP POST /api/lembrete responded 201 in 13.1400 ms
+Activity.TraceId:            b1c3f11de662f9bd75975eb60bc0d257
+Activity.SpanId:             80b4ad56e2e2e911
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Lembrete
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.1979375Z
+Activity.Duration:           00:00:00.0134107
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/lembrete
+    network.protocol.version: 1.1
+    http.route: api/Lembrete
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (5a23757e-977b-4778-b1d7-64b5c179e0f6) HTTP POST /api/tutor responded 201 in 1.4416 ms
+Activity.TraceId:            931c2ff482615ccb8acd2f099cb6a17a
+Activity.SpanId:             2d6c8322c9b8f37b
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.2157448Z
+Activity.Duration:           00:00:00.0016698
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (700cbd2b-fb33-48f9-a1e4-d3f3d458911d) HTTP POST /api/pet responded 201 in 1.2934 ms
+Activity.TraceId:            81ff774dca27e8811749a0674b99dd98
+Activity.SpanId:             c5ac5b4fdf57da5a
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.2189980Z
+Activity.Duration:           00:00:00.0015150
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (d26167b9-5b9a-484d-8430-0f6d82aa2a3c) HTTP POST /api/pet responded 201 in 1.0732 ms
+Activity.TraceId:            e14b4985945c140f37c7e506127d9e1a
+Activity.SpanId:             a2104dc95c776d5a
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.2208398Z
+Activity.Duration:           00:00:00.0012570
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (7cab0900-0ebe-4512-8c56-a3abc0cf31ac) HTTP GET /api/pet responded 200 in 48.1023 ms
+Activity.TraceId:            07ffb47a5e921f164d07b97084ec1edc
+Activity.SpanId:             3f6f74596745140a
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.2225540Z
+Activity.Duration:           00:00:00.0496605
+Activity.Tags:
+    server.address: localhost
+    url.query: ?tutorId=Redacted&especie=Redacted
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (889a7053-3dca-4cda-bc05-e1633c62b2f5) HTTP GET /health responded 200 in 16.0469 ms
+Activity.TraceId:            5f43742c86519075ec695bdfa8dbc46c
+Activity.SpanId:             a997982cd5afe52f
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET /health
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.2779097Z
+Activity.Duration:           00:00:00.0171315
+Activity.Tags:
+    server.address: localhost
+    http.request.method: GET
+    url.scheme: http
+    url.path: /health
+    network.protocol.version: 1.1
+    http.route: /health
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (57a9af2c-cc7f-4cc8-99d8-b1663aba663d) HTTP POST /api/tutor responded 201 in 1.7998 ms
+Activity.TraceId:            af1c9ec68c82de71b32c4f8d29a146dd
+Activity.SpanId:             6876587f8240728f
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3008947Z
+Activity.Duration:           00:00:00.0020584
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+  Aprovado PetCare.IntegrationTests.ExternalServiceHealthCheckTests.CheckHealthAsync_ServicoNaoRespondeNoTimeout_RetornaDegraded [1 s]
+  Aprovado PetCare.IntegrationTests.ConsultaControllerTests.GetById_IdInexistente_Retorna404 [1 s]
+  Aprovado PetCare.IntegrationTests.ConsultaControllerTests.Post_PetExistente_Retorna201 [288 ms]
+  Aprovado PetCare.IntegrationTests.ConsultaControllerTests.Post_PetInexistente_Retorna404 [20 ms]
+  Aprovado PetCare.IntegrationTests.LembreteControllerTests.Post_DataLembreteAnteriorAtual_Retorna400 [26 ms]
+  Aprovado PetCare.IntegrationTests.LembreteControllerTests.Post_PetInexistente_Retorna404 [7 ms]
+  Aprovado PetCare.IntegrationTests.LembreteControllerTests.Post_PetExistente_Retorna201 [28 ms]
+  Aprovado PetCare.IntegrationTests.PaginacaoHateoasTests.GetAll_FiltroPorEspecie_RetornaSomenteOsPetsDaEspecie [62 ms]
+  Aprovado PetCare.IntegrationTests.PaginacaoHateoasTests.Health_ComChecksIsolados_Retorna200ComCheckSelf [22 ms]
+[13:14:46 INF] (a8d385c2-e277-4778-8a0c-36cac264a5c9) HTTP GET /api/auditoria responded 200 in 11.2099 ms
+Activity.TraceId:            b87c8653dc7714eca845ff0c03a42512
+Activity.SpanId:             9787fd0478fc173a
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/auditoria
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3038959Z
+Activity.Duration:           00:00:00.0114998
+Activity.Tags:
+    server.address: localhost
+    url.query: ?entidade=Redacted&acao=Redacted
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/auditoria
+    network.protocol.version: 1.1
+    http.route: api/auditoria
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (a9a5a647-93fa-4fa0-a09f-686d34d8b009) HTTP POST /api/tutor responded 201 in 1.6422 ms
+Activity.TraceId:            56ab0f1b0ce061f9a46d701ef8d2e76c
+Activity.SpanId:             57a6a8fb0b12fdf4
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3195774Z
+Activity.Duration:           00:00:00.0018862
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (6a0a1b66-6a43-42cd-b7bc-58c9bfd34fe0) HTTP POST /api/pet responded 201 in 1.3120 ms
+Activity.TraceId:            173ccd0dc2b55e03699fdf13a61d973c
+Activity.SpanId:             438a471df3f5f2f0
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3224121Z
+Activity.Duration:           00:00:00.0015463
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (e2ba2beb-beff-4c76-b1b8-57bc21245323) HTTP POST /api/pet responded 201 in 1.0476 ms
+Activity.TraceId:            b75b4596e3e5248613a9a710b26de304
+Activity.SpanId:             8d677e52463ab994
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3242241Z
+Activity.Duration:           00:00:00.0012270
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (a3104df2-4748-416a-a7a0-1b1f20ae3979) HTTP POST /api/pet responded 201 in 1.0015 ms
+Activity.TraceId:            f8b0e9cdfe4abed5091a4cbd863d6691
+Activity.SpanId:             f57d14545bbdb86a
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3256485Z
+Activity.Duration:           00:00:00.0011629
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (3581cecc-0dd9-4678-aa81-b13d0c800e26) HTTP GET /api/pet responded 200 in 10.1682 ms
+Activity.TraceId:            e51e72f0d5d26339a68d1921741bcb97
+Activity.SpanId:             aa942127fcdcb4f0
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3269840Z
+Activity.Duration:           00:00:00.0103916
+Activity.Tags:
+    server.address: localhost
+    url.query: ?tutorId=Redacted&page=Redacted&pageSize=Redacted&sortBy=Redacted&sortDir=Redacted
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (1796627c-fcf8-4f8c-a6d2-8699498ab78b) HTTP GET /api/pet responded 500 in 3.7008 ms
+System.ArgumentException: Campo de ordena��o 'campoQueNaoExiste' inv�lido. Campos permitidos: Nome, Especie, Raca, DataNascimento, TutorId, Id.
+   at PetCare.Infrastructure.Persistence.QueryableExtensions.ResolveProperty(Type type, String name) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Persistence\QueryableExtensions.cs:line 35
+   at PetCare.Infrastructure.Persistence.QueryableExtensions.OrderByProperty[T](IQueryable`1 source, String propertyName, Boolean descending) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Persistence\QueryableExtensions.cs:line 12
+   at PetCare.Infrastructure.Repositories.Repository`1.GetPagedAsync(QueryParameters query, Expression`1 filter) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\Repository.cs:line 38
+   at PetCare.Application.Services.PetService.ListarAsync(PetFilter filtro) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 33
+   at PetCare.API.Controllers.PetController.GetAll(PetFilter filter) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 35
+   at lambda_method375(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (1796627c-fcf8-4f8c-a6d2-8699498ab78b) Erro n�o tratado (400) na requisi��o 0HNPK8LL4I2PB: Campo de ordena��o 'campoQueNaoExiste' inv�lido. Campos permitidos: Nome, Especie, Raca, DataNascimento, TutorId, Id.
+System.ArgumentException: Campo de ordena��o 'campoQueNaoExiste' inv�lido. Campos permitidos: Nome, Especie, Raca, DataNascimento, TutorId, Id.
+   at PetCare.Infrastructure.Persistence.QueryableExtensions.ResolveProperty(Type type, String name) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Persistence\QueryableExtensions.cs:line 35
+   at PetCare.Infrastructure.Persistence.QueryableExtensions.OrderByProperty[T](IQueryable`1 source, String propertyName, Boolean descending) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Persistence\QueryableExtensions.cs:line 12
+   at PetCare.Infrastructure.Repositories.Repository`1.GetPagedAsync(QueryParameters query, Expression`1 filter) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\Repository.cs:line 38
+   at PetCare.Application.Services.PetService.ListarAsync(PetFilter filtro) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 33
+   at PetCare.API.Controllers.PetController.GetAll(PetFilter filter) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 35
+   at lambda_method375(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            b90532ca6a0f000daead6a9860a32a0f
+Activity.SpanId:             bd0c1a932ee96b5e
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3485794Z
+Activity.Duration:           00:00:00.0065901
+Activity.Tags:
+    server.address: localhost
+    url.query: ?sortBy=Redacted
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 400
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (678e1bdb-bef0-48d5-8e60-4b4dc124481f) HTTP POST /api/tutor responded 201 in 1.6072 ms
+Activity.TraceId:            c9473ff2570f1583ab5bae7ef386ba09
+Activity.SpanId:             5313bad56c831ca7
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3576785Z
+Activity.Duration:           00:00:00.0018853
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (2d152246-0bc4-48b2-b416-bb0c2ac5cfba) HTTP POST /api/pet responded 201 in 1.2295 ms
+Activity.TraceId:            fd786236cdc79da1900e36b90d8e4c68
+Activity.SpanId:             bd6caffa841b36aa
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3603051Z
+Activity.Duration:           00:00:00.0014190
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (498f35ee-10c3-4e8f-b3ff-eab4f3d41efb) HTTP GET /api/pet/9 responded 200 in 15.3429 ms
+Activity.TraceId:            43e8afcd5fa158cadbaa4e5b2d6aa02e
+Activity.SpanId:             b8324200dee59697
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Pet/{id:int}
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3620396Z
+Activity.Duration:           00:00:00.0156398
+Activity.Tags:
+    server.address: localhost
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/pet/9
+    network.protocol.version: 1.1
+    http.route: api/Pet/{id:int}
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (7b859e30-9bc9-4049-bdb6-ee6e5a423766) HTTP POST /api/tutor responded 201 in 1.4950 ms
+Activity.TraceId:            905db5bc9c93ded1f054e37143c53790
+Activity.SpanId:             874439dd2b4028b1
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3813620Z
+Activity.Duration:           00:00:00.0017459
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (cc75cee8-e644-4ce5-840f-124bc7e9d912) HTTP POST /api/pet responded 201 in 1.3386 ms
+Activity.TraceId:            96ffdc5460315a65871fb04c15b6c4b1
+Activity.SpanId:             27e0e52b8c68e038
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3839501Z
+Activity.Duration:           00:00:00.0016174
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (30e047d5-bc2e-486e-aafa-ff489b2718ca) HTTP POST /api/pet responded 500 in 1.0615 ms
+PetCare.Domain.Exceptions.ResourceNotFoundException: Tutor com Id 999999 n�o foi encontrado.
+   at PetCare.Infrastructure.Repositories.PetRepository.ValidarTutorExistenteAsync(Int32 tutorId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\PetRepository.cs:line 41
+   at PetCare.Infrastructure.Repositories.PetRepository.AddAsync(Pet entity) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\PetRepository.cs:line 27
+   at PetCare.Application.Services.PetService.CriarAsync(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 43
+   at PetCare.API.Controllers.PetController.Create(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 64
+   at lambda_method172(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (30e047d5-bc2e-486e-aafa-ff489b2718ca) Erro n�o tratado (404) na requisi��o 0HNPK8LL4I2PH: Tutor com Id 999999 n�o foi encontrado.
+PetCare.Domain.Exceptions.ResourceNotFoundException: Tutor com Id 999999 n�o foi encontrado.
+   at PetCare.Infrastructure.Repositories.PetRepository.ValidarTutorExistenteAsync(Int32 tutorId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\PetRepository.cs:line 41
+   at PetCare.Infrastructure.Repositories.PetRepository.AddAsync(Pet entity) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Infrastructure\Repositories\PetRepository.cs:line 27
+   at PetCare.Application.Services.PetService.CriarAsync(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 43
+   at PetCare.API.Controllers.PetController.Create(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 64
+   at lambda_method172(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            9ebc4a68e2bd982c26d0ca27d8824b54
+Activity.SpanId:             63df01cefbbb0198
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3877514Z
+Activity.Duration:           00:00:00.0067691
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 404
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (8deab21d-7dc1-43f2-be86-58bb6efcc02a) HTTP GET /api/pet/999999 responded 500 in 1.5914 ms
+PetCare.Domain.Exceptions.ResourceNotFoundException: Pet com Id 999999 n�o foi encontrado.
+   at PetCare.Application.Services.PetService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 65
+   at PetCare.Application.Services.PetService.ObterAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 38
+   at PetCare.API.Controllers.PetController.GetById(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 51
+   at lambda_method415(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (8deab21d-7dc1-43f2-be86-58bb6efcc02a) Erro n�o tratado (404) na requisi��o 0HNPK8LL4I2PI: Pet com Id 999999 n�o foi encontrado.
+PetCare.Domain.Exceptions.ResourceNotFoundException: Pet com Id 999999 n�o foi encontrado.
+   at PetCare.Application.Services.PetService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 65
+   at PetCare.Application.Services.PetService.ObterAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 38
+   at PetCare.API.Controllers.PetController.GetById(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 51
+   at lambda_method415(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            cff1b6d665a161ba2f5f5e456913df9e
+Activity.SpanId:             c422bcade62fedc8
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Pet/{id:int}
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.3970898Z
+Activity.Duration:           00:00:00.0037797
+Activity.Tags:
+    server.address: localhost
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/pet/999999
+    network.protocol.version: 1.1
+    http.route: api/Pet/{id:int}
+    http.response.status_code: 404
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (4bd40ae4-1f41-4cee-81bc-f57d382ba2a5) HTTP POST /api/tutor responded 201 in 1.4163 ms
+Activity.TraceId:            aeca8197b4baa18ca454f99bdeb33008
+Activity.SpanId:             b569f22b5fbc15fb
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4035705Z
+Activity.Duration:           00:00:00.0016626
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (0b6f0090-7f1e-47a2-8dde-7d3b8ba836e9) HTTP POST /api/pet responded 500 in 0.7282 ms
+PetCare.Domain.Exceptions.DomainException: A data de nascimento do pet n�o pode ser futura.
+   at PetCare.Domain.Entities.Pet.ValidarDataNascimento(DateTime dataNascimento) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Pet.cs:line 66
+   at PetCare.Domain.Entities.Pet..ctor(String nome, String especie, String raca, DateTime dataNascimento, Int32 tutorId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Pet.cs:line 30
+   at PetCare.Application.Services.PetService.CriarAsync(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 42
+   at PetCare.API.Controllers.PetController.Create(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 64
+   at lambda_method172(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (0b6f0090-7f1e-47a2-8dde-7d3b8ba836e9) Erro n�o tratado (400) na requisi��o 0HNPK8LL4I2PK: A data de nascimento do pet n�o pode ser futura.
+PetCare.Domain.Exceptions.DomainException: A data de nascimento do pet n�o pode ser futura.
+   at PetCare.Domain.Entities.Pet.ValidarDataNascimento(DateTime dataNascimento) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Pet.cs:line 66
+   at PetCare.Domain.Entities.Pet..ctor(String nome, String especie, String raca, DateTime dataNascimento, Int32 tutorId) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Pet.cs:line 30
+   at PetCare.Application.Services.PetService.CriarAsync(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\PetService.cs:line 42
+   at PetCare.API.Controllers.PetController.Create(PetRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\PetController.cs:line 64
+   at lambda_method172(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            68cd43095e59a16c9588415aa846853f
+Activity.SpanId:             fb41045c6e360c89
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Pet
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4060294Z
+Activity.Duration:           00:00:00.0024497
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/pet
+    network.protocol.version: 1.1
+    http.route: api/Pet
+    http.response.status_code: 400
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (c9bce9b7-8166-42b8-87ee-00cc781989f8) HTTP DELETE /api/tutor/999999 responded 500 in 13.4279 ms
+PetCare.Domain.Exceptions.ResourceNotFoundException: Tutor com Id 999999 n�o foi encontrado.
+   at PetCare.Application.Services.TutorService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 70
+   at PetCare.Application.Services.TutorService.RemoverAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 64
+   at PetCare.API.Controllers.TutorController.Delete(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 92
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (c9bce9b7-8166-42b8-87ee-00cc781989f8) Erro n�o tratado (404) na requisi��o 0HNPK8LL4I2PL: Tutor com Id 999999 n�o foi encontrado.
+PetCare.Domain.Exceptions.ResourceNotFoundException: Tutor com Id 999999 n�o foi encontrado.
+   at PetCare.Application.Services.TutorService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 70
+   at PetCare.Application.Services.TutorService.RemoverAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 64
+   at PetCare.API.Controllers.TutorController.Delete(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 92
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            c935bb6c85592c7ea0b832a0545039af
+Activity.SpanId:             fa4afe37d59619ea
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        DELETE api/Tutor/{id:int}
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4102228Z
+Activity.Duration:           00:00:00.0157487
+Activity.Tags:
+    server.address: localhost
+    http.request.method: DELETE
+    url.scheme: http
+    url.path: /api/tutor/999999
+    network.protocol.version: 1.1
+    http.route: api/Tutor/{id:int}
+    http.response.status_code: 404
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+  Aprovado PetCare.IntegrationTests.PaginacaoHateoasTests.Auditoria_AposCriarTutor_RegistraEventoConsultavel [17 ms]
+  Aprovado PetCare.IntegrationTests.PaginacaoHateoasTests.GetAll_ComPaginacaoEOrdenacao_RetornaPaginaELinksDeNavegacao [29 ms]
+  Aprovado PetCare.IntegrationTests.PaginacaoHateoasTests.GetAll_CampoDeOrdenacaoInvalido_Retorna400 [8 ms]
+  Aprovado PetCare.IntegrationTests.PaginacaoHateoasTests.GetById_RetornaLinksHateoas [22 ms]
+  Aprovado PetCare.IntegrationTests.PetControllerTests.Post_TutorExistente_Retorna201 [6 ms]
+  Aprovado PetCare.IntegrationTests.PetControllerTests.Post_TutorInexistente_Retorna404 [8 ms]
+  Aprovado PetCare.IntegrationTests.PetControllerTests.GetById_IdInexistente_Retorna404 [6 ms]
+  Aprovado PetCare.IntegrationTests.PetControllerTests.Post_DataNascimentoFutura_Retorna400 [6 ms]
+  Aprovado PetCare.IntegrationTests.TutorControllerTests.Delete_IdInexistente_Retorna404 [17 ms]
+[13:14:46 ERR] (725e292e-85b9-48da-b403-5346c5f711f6) HTTP GET /api/tutor/999999 responded 500 in 6.4614 ms
+PetCare.Domain.Exceptions.ResourceNotFoundException: Tutor com Id 999999 n�o foi encontrado.
+   at PetCare.Application.Services.TutorService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 70
+   at PetCare.Application.Services.TutorService.ObterAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 36
+   at PetCare.API.Controllers.TutorController.GetById(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 51
+   at lambda_method441(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (725e292e-85b9-48da-b403-5346c5f711f6) Erro n�o tratado (404) na requisi��o 0HNPK8LL4I2PM: Tutor com Id 999999 n�o foi encontrado.
+PetCare.Domain.Exceptions.ResourceNotFoundException: Tutor com Id 999999 n�o foi encontrado.
+   at PetCare.Application.Services.TutorService.BuscarAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 70
+   at PetCare.Application.Services.TutorService.ObterAsync(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 36
+   at PetCare.API.Controllers.TutorController.GetById(Int32 id) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 51
+   at lambda_method441(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            4402703d47a03d32ee7eba502a86af8a
+Activity.SpanId:             6b4705d10ecba81a
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Tutor/{id:int}
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4281716Z
+Activity.Duration:           00:00:00.0087659
+Activity.Tags:
+    server.address: localhost
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/tutor/999999
+    network.protocol.version: 1.1
+    http.route: api/Tutor/{id:int}
+    http.response.status_code: 404
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (72c7df96-0157-4241-bab4-18a0af8a58f4) HTTP POST /api/tutor responded 201 in 1.2804 ms
+Activity.TraceId:            9280f30b57ea0a03cdf0228559303198
+Activity.SpanId:             6ed3b68594b52f35
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4392549Z
+Activity.Duration:           00:00:00.0014865
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (8c0f667a-dc0d-4a0f-8f42-50a6cf20f4ce) HTTP POST /api/tutor responded 500 in 1.0466 ms
+PetCare.Domain.Exceptions.ConflictException: J� existe um tutor cadastrado com o e-mail 'duplicadoe754737f1aec4ddaa41aabed63639609@email.com'.
+   at PetCare.Application.Services.TutorService.CriarAsync(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 41
+   at PetCare.API.Controllers.TutorController.Create(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 64
+   at lambda_method107(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (8c0f667a-dc0d-4a0f-8f42-50a6cf20f4ce) Erro n�o tratado (409) na requisi��o 0HNPK8LL4I2PO: J� existe um tutor cadastrado com o e-mail 'duplicadoe754737f1aec4ddaa41aabed63639609@email.com'.
+PetCare.Domain.Exceptions.ConflictException: J� existe um tutor cadastrado com o e-mail 'duplicadoe754737f1aec4ddaa41aabed63639609@email.com'.
+   at PetCare.Application.Services.TutorService.CriarAsync(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 41
+   at PetCare.API.Controllers.TutorController.Create(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 64
+   at lambda_method107(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            a820a2e1db43fb745ebb8bac8193d2ef
+Activity.SpanId:             426f02cdda5f16dd
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4412801Z
+Activity.Duration:           00:00:00.0026752
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 409
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 ERR] (432880db-e0c5-4b2b-88f9-b81f67bd8e5b) HTTP POST /api/tutor responded 500 in 0.9571 ms
+PetCare.Domain.Exceptions.DomainException: O nome do tutor � obrigat�rio.
+   at PetCare.Domain.Entities.Tutor.ValidarNome(String nome) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Tutor.cs:line 49
+   at PetCare.Domain.Entities.Tutor..ctor(String nome, String email, String telefone) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Tutor.cs:line 28
+   at PetCare.Application.Services.TutorService.CriarAsync(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 43
+   at PetCare.API.Controllers.TutorController.Create(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 64
+   at lambda_method107(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+[13:14:46 ERR] (432880db-e0c5-4b2b-88f9-b81f67bd8e5b) Erro n�o tratado (400) na requisi��o 0HNPK8LL4I2PP: O nome do tutor � obrigat�rio.
+PetCare.Domain.Exceptions.DomainException: O nome do tutor � obrigat�rio.
+   at PetCare.Domain.Entities.Tutor.ValidarNome(String nome) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Tutor.cs:line 49
+   at PetCare.Domain.Entities.Tutor..ctor(String nome, String email, String telefone) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Domain\Entities\Tutor.cs:line 28
+   at PetCare.Application.Services.TutorService.CriarAsync(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.Application\Services\TutorService.cs:line 43
+   at PetCare.API.Controllers.TutorController.Create(TutorRequest request) in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Controllers\TutorController.cs:line 64
+   at lambda_method107(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Program.<>c.<<<Main>$>b__0_10>d.MoveNext() in C:\2TDSPG-DOTNET\PET-FAMILY-DOTNET-SPRINT3\src\PetCare.API\Program.cs:line 198
+--- End of stack trace from previous location ---
+   at Serilog.AspNetCore.RequestLoggingMiddleware.Invoke(HttpContext httpContext)
+   at Microsoft.AspNetCore.Diagnostics.ExceptionHandlerMiddlewareImpl.<Invoke>g__Awaited|10_0(ExceptionHandlerMiddlewareImpl middleware, HttpContext context, Task task)
+Activity.TraceId:            d38b88aa9f74c13d8663a7fc7044eaaa
+Activity.SpanId:             8b95d206abcbff12
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4458470Z
+Activity.Duration:           00:00:00.0028964
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 400
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (36171685-4073-4b47-b2cb-fda2f3518186) HTTP POST /api/tutor responded 201 in 1.9832 ms
+Activity.TraceId:            e46f9e9388cc698ed0e60c0a27886955
+Activity.SpanId:             32e3f6920ebc700f
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        POST api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4512844Z
+Activity.Duration:           00:00:00.0022771
+Activity.Tags:
+    server.address: localhost
+    http.request.method: POST
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 201
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[13:14:46 INF] (0748f671-80ac-4752-a140-511d857f6e63) HTTP GET /api/tutor responded 200 in 17.0502 ms
+Activity.TraceId:            c954eb97300a9f1b89d22ec85f49ce6a
+Activity.SpanId:             aca9c0b0367c4932
+Activity.TraceFlags:         Recorded
+Activity.DisplayName:        GET api/Tutor
+Activity.Kind:               Server
+Activity.StartTime:          2026-10-27T16:14:46.4552651Z
+Activity.Duration:           00:00:00.0173284
+Activity.Tags:
+    server.address: localhost
+    http.request.method: GET
+    url.scheme: http
+    url.path: /api/tutor
+    network.protocol.version: 1.1
+    http.route: api/Tutor
+    http.response.status_code: 200
+Instrumentation scope (ActivitySource):
+    Name: Microsoft.AspNetCore
+Resource associated with Activity:
+    service.name: PetCare.API
+    service.instance.id: 0a3353f5-c6ab-4c39-aa43-e2f2c407e07a
+    telemetry.sdk.name: opentelemetry
+    telemetry.sdk.language: dotnet
+    telemetry.sdk.version: 1.11.1
+[xUnit.net 00:00:02.84]   Finished:    PetCare.IntegrationTests
+  Aprovado PetCare.IntegrationTests.TutorControllerTests.GetById_IdInexistente_Retorna404 [10 ms]
+  Aprovado PetCare.IntegrationTests.TutorControllerTests.Post_EmailDuplicado_Retorna409 [6 ms]
+  Aprovado PetCare.IntegrationTests.TutorControllerTests.Post_NomeVazio_Retorna400 [4 ms]
+  Aprovado PetCare.IntegrationTests.TutorControllerTests.Post_DadosValidos_Retorna201ComTutorCriado [4 ms]
+  Aprovado PetCare.IntegrationTests.TutorControllerTests.GetAll_SemFiltros_Retorna200 [19 ms]
 
-Aprovado!  – Com falha:     0, Aprovado:    16, Ignorado:     0, Total:    16, Duração: 1 s - PetCare.IntegrationTests.dll (net10.0)
+Execução de Teste Bem-sucedida.
+Total de testes: 26
+     Aprovados: 26
+Tempo total: 3,9034 Segundos
