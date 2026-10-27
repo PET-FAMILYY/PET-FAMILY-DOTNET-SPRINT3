@@ -1,50 +1,54 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PetCare.API.Hateoas;
+using PetCare.Application.Common;
 using PetCare.Application.DTOs;
-using PetCare.Application.Interfaces;
-using PetCare.Domain.Entities;
-using PetCare.Domain.Exceptions;
+using PetCare.Application.Services;
 
 namespace PetCare.API.Controllers;
 
 /// <summary>
 /// Gerencia o cadastro de tutores (responsáveis pelos pets).
 /// </summary>
-///
-[Authorize, ApiController, Route("api/[controller]"), Produces("application/json")]
+[Authorize]
+[ApiController]
+[Route("api/[controller]")]
+[Produces("application/json")]
 public class TutorController : ControllerBase
 {
-    private readonly ITutorRepository _tutorRepository;
+    private readonly ITutorService _service;
 
-    public TutorController(ITutorRepository tutorRepository)
-    {
-        _tutorRepository = tutorRepository;
-    }
+    public TutorController(ITutorService service) => _service = service;
 
-    /// <summary>Lista todos os tutores cadastrados.</summary>
-    /// <response code="200">Retorna a lista de tutores.</response>
+    /// <summary>Lista tutores com paginação, ordenação e filtros.</summary>
+    /// <remarks>
+    /// Exemplo: `GET /api/tutor?nome=joao&amp;page=1&amp;pageSize=5&amp;sortBy=email&amp;sortDir=asc`.
+    /// Campos de ordenação: Id, Nome, Email, Telefone.
+    /// </remarks>
+    /// <response code="200">Página de tutores com links de navegação (HATEOAS).</response>
+    /// <response code="400">Campo de ordenação inválido.</response>
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<TutorResponse>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<TutorResponse>>> GetAll()
+    [ProducesResponseType(typeof(PagedResult<TutorResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<PagedResult<TutorResponse>>> GetAll([FromQuery] TutorFilter filter)
     {
-        var tutores = await _tutorRepository.GetAllAsync();
-        return Ok(tutores.Select(ToResponse));
+        var result = await _service.ListarAsync(filter);
+        return Ok(result with
+        {
+            Items = result.Items.Select(WithLinks).ToList(),
+            Links = Hateoas.Hateoas.PageLinks(Request, result)
+        });
     }
 
     /// <summary>Busca um tutor pelo Id.</summary>
     /// <param name="id">Identificador do tutor.</param>
-    /// <response code="200">Tutor encontrado.</response>
+    /// <response code="200">Tutor encontrado (com links HATEOAS).</response>
     /// <response code="404">Tutor não encontrado.</response>
     [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(TutorResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<TutorResponse>> GetById(int id)
-    {
-        var tutor = await _tutorRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Tutor com Id {id} não foi encontrado.");
-
-        return Ok(ToResponse(tutor));
-    }
+        => Ok(WithLinks(await _service.ObterAsync(id)));
 
     /// <summary>Cadastra um novo tutor.</summary>
     /// <param name="request">Dados do tutor.</param>
@@ -57,14 +61,8 @@ public class TutorController : ControllerBase
     [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<ActionResult<TutorResponse>> Create(TutorRequest request)
     {
-        if (await _tutorRepository.ExistsByEmailAsync(request.Email))
-            throw new ConflictException($"Já existe um tutor cadastrado com o e-mail '{request.Email}'.");
-
-        var tutor = new Tutor(request.Nome, request.Email, request.Telefone);
-        await _tutorRepository.AddAsync(tutor);
-
-        var response = ToResponse(tutor);
-        return CreatedAtAction(nameof(GetById), new { id = tutor.Id }, response);
+        var tutor = await _service.CriarAsync(request);
+        return CreatedAtAction(nameof(GetById), new { id = tutor.Id }, WithLinks(tutor));
     }
 
     /// <summary>Atualiza os dados de um tutor existente.</summary>
@@ -80,18 +78,7 @@ public class TutorController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     [ProducesResponseType(StatusCodes.Status409Conflict)]
     public async Task<ActionResult<TutorResponse>> Update(int id, TutorRequest request)
-    {
-        var tutor = await _tutorRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Tutor com Id {id} não foi encontrado.");
-
-        if (await _tutorRepository.ExistsByEmailAsync(request.Email, ignoreId: id))
-            throw new ConflictException($"Já existe um tutor cadastrado com o e-mail '{request.Email}'.");
-
-        tutor.Atualizar(request.Nome, request.Email, request.Telefone);
-        await _tutorRepository.UpdateAsync(tutor);
-
-        return Ok(ToResponse(tutor));
-    }
+        => Ok(WithLinks(await _service.AtualizarAsync(id, request)));
 
     /// <summary>Remove um tutor.</summary>
     /// <param name="id">Identificador do tutor.</param>
@@ -102,13 +89,15 @@ public class TutorController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(int id)
     {
-        var tutor = await _tutorRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Tutor com Id {id} não foi encontrado.");
-
-        await _tutorRepository.DeleteAsync(tutor);
+        await _service.RemoverAsync(id);
         return NoContent();
     }
 
-    private static TutorResponse ToResponse(Tutor tutor)
-        => new(tutor.Id, tutor.Nome, tutor.Email, tutor.Telefone);
+    private TutorResponse WithLinks(TutorResponse tutor) => tutor with
+    {
+        Links = Hateoas.Hateoas.ForItem(
+            self: Url.Action(nameof(GetById), new { id = tutor.Id })!,
+            collection: Url.Action(nameof(GetAll))!,
+            new Link(Url.Action("GetAll", "Pet", new { tutorId = tutor.Id })!, "pets", "GET"))
+    };
 }

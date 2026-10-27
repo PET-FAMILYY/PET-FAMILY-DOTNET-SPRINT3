@@ -1,9 +1,9 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PetCare.API.Hateoas;
+using PetCare.Application.Common;
 using PetCare.Application.DTOs;
-using PetCare.Application.Interfaces;
-using PetCare.Domain.Entities;
-using PetCare.Domain.Exceptions;
+using PetCare.Application.Services;
 
 namespace PetCare.API.Controllers;
 
@@ -16,37 +16,39 @@ namespace PetCare.API.Controllers;
 [Produces("application/json")]
 public class PetController : ControllerBase
 {
-    private readonly IPetRepository _petRepository;
+    private readonly IPetService _service;
 
-    public PetController(IPetRepository petRepository)
-    {
-        _petRepository = petRepository;
-    }
+    public PetController(IPetService service) => _service = service;
 
-    /// <summary>Lista todos os pets cadastrados.</summary>
-    /// <response code="200">Retorna a lista de pets.</response>
+    /// <summary>Lista pets com paginação, ordenação e filtros.</summary>
+    /// <remarks>
+    /// Exemplo: `GET /api/pet?especie=cachorro&amp;tutorId=1&amp;page=1&amp;pageSize=10&amp;sortBy=nome&amp;sortDir=desc`.
+    /// Campos de ordenação: Id, Nome, Especie, Raca, DataNascimento, TutorId.
+    /// </remarks>
+    /// <response code="200">Página de pets com links de navegação (HATEOAS).</response>
+    /// <response code="400">Campo de ordenação inválido.</response>
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<PetResponse>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<PetResponse>>> GetAll()
+    [ProducesResponseType(typeof(PagedResult<PetResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<PagedResult<PetResponse>>> GetAll([FromQuery] PetFilter filter)
     {
-        var pets = await _petRepository.GetAllAsync();
-        return Ok(pets.Select(ToResponse));
+        var result = await _service.ListarAsync(filter);
+        return Ok(result with
+        {
+            Items = result.Items.Select(WithLinks).ToList(),
+            Links = Hateoas.Hateoas.PageLinks(Request, result)
+        });
     }
 
     /// <summary>Busca um pet pelo Id.</summary>
     /// <param name="id">Identificador do pet.</param>
-    /// <response code="200">Pet encontrado.</response>
+    /// <response code="200">Pet encontrado (com links HATEOAS).</response>
     /// <response code="404">Pet não encontrado.</response>
     [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(PetResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<PetResponse>> GetById(int id)
-    {
-        var pet = await _petRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Pet com Id {id} não foi encontrado.");
-
-        return Ok(ToResponse(pet));
-    }
+        => Ok(WithLinks(await _service.ObterAsync(id)));
 
     /// <summary>Cadastra um novo pet vinculado a um tutor existente.</summary>
     /// <param name="request">Dados do pet.</param>
@@ -59,11 +61,8 @@ public class PetController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<PetResponse>> Create(PetRequest request)
     {
-        var pet = new Pet(request.Nome, request.Especie, request.Raca, request.DataNascimento, request.TutorId);
-        await _petRepository.AddAsync(pet);
-
-        var response = ToResponse(pet);
-        return CreatedAtAction(nameof(GetById), new { id = pet.Id }, response);
+        var pet = await _service.CriarAsync(request);
+        return CreatedAtAction(nameof(GetById), new { id = pet.Id }, WithLinks(pet));
     }
 
     /// <summary>Atualiza os dados de um pet existente.</summary>
@@ -77,15 +76,7 @@ public class PetController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<PetResponse>> Update(int id, PetRequest request)
-    {
-        var pet = await _petRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Pet com Id {id} não foi encontrado.");
-
-        pet.Atualizar(request.Nome, request.Especie, request.Raca, request.DataNascimento);
-        await _petRepository.UpdateAsync(pet);
-
-        return Ok(ToResponse(pet));
-    }
+        => Ok(WithLinks(await _service.AtualizarAsync(id, request)));
 
     /// <summary>Remove um pet.</summary>
     /// <param name="id">Identificador do pet.</param>
@@ -96,13 +87,17 @@ public class PetController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(int id)
     {
-        var pet = await _petRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Pet com Id {id} não foi encontrado.");
-
-        await _petRepository.DeleteAsync(pet);
+        await _service.RemoverAsync(id);
         return NoContent();
     }
 
-    private static PetResponse ToResponse(Pet pet)
-        => new(pet.Id, pet.Nome, pet.Especie, pet.Raca, pet.DataNascimento, pet.TutorId);
+    private PetResponse WithLinks(PetResponse pet) => pet with
+    {
+        Links = Hateoas.Hateoas.ForItem(
+            self: Url.Action(nameof(GetById), new { id = pet.Id })!,
+            collection: Url.Action(nameof(GetAll))!,
+            new Link(Url.Action("GetById", "Tutor", new { id = pet.TutorId })!, "tutor", "GET"),
+            new Link(Url.Action("GetAll", "Consulta", new { petId = pet.Id })!, "consultas", "GET"),
+            new Link(Url.Action("GetAll", "Lembrete", new { petId = pet.Id })!, "lembretes", "GET"))
+    };
 }

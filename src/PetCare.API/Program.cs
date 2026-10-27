@@ -1,7 +1,7 @@
 using System.Reflection;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
-using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Diagnostics.HealthChecks;
 using Microsoft.Extensions.Diagnostics.HealthChecks;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi;
@@ -10,12 +10,14 @@ using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 using PetCare.API.HealthChecks;
 using PetCare.API.Middleware;
-using PetCare.Application.Interfaces;
-using PetCare.Domain.Entities;
-using PetCare.Infrastructure.Persistence;
-using PetCare.Infrastructure.Repositories;
-using PetCare.Infrastructure.Security;
+using PetCare.API.Services;
+using PetCare.Application;
+using PetCare.Application.Auditing;
+using PetCare.Infrastructure;
+using PetCare.Infrastructure.HealthChecks;
+using PetCare.Infrastructure.Mongo;
 using Serilog;
+using Serilog.Enrichers.CorrelationId;
 
 const string ServiceName = "PetCare.API";
 
@@ -36,7 +38,8 @@ builder.Host.UseSerilog((context, services, configuration) => configuration
         outputTemplate:
         "{Timestamp:yyyy-MM-dd HH:mm:ss.fff zzz} [{Level:u3}] ({CorrelationId}) {Message:lj}{NewLine}{Exception}"));
 
-// ---------- Serviços da aplicação ----------
+// ---------- MVC / Swagger ----------
+builder.Services.AddRouting(options => options.LowercaseUrls = true);
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 
@@ -46,14 +49,15 @@ builder.Services.AddSwaggerGen(options =>
     {
         Title = "PetCare API",
         Version = "v1",
-        Description = "API para gestão de clínica veterinária / cuidado de pets (tutores, pets, consultas e lembretes)."
+        Description = "API para gestão de clínica veterinária / cuidado de pets (tutores, pets, consultas, lembretes e auditoria). " +
+                      "Listagens com paginação (page, pageSize), ordenação (sortBy, sortDir) e filtros; respostas com links HATEOAS."
     });
 
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     if (File.Exists(xmlPath))
         options.IncludeXmlComments(xmlPath);
-    
+
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
         Name = "Authorization",
@@ -70,24 +74,15 @@ builder.Services.AddSwaggerGen(options =>
     });
 });
 
-// ---------- Persistência (EF Core + Oracle) ----------
-var connectionString = builder.Configuration.GetConnectionString("OracleConnection");
-builder.Services.AddDbContext<PetCareContext>(options =>
-    options.UseOracle(connectionString));
+// ---------- Camadas (Clean Architecture): cada camada registra suas dependências ----------
+var oracleConnection = builder.Configuration.GetConnectionString("OracleConnection");
+var mongoSettings = builder.Configuration.GetSection("Mongo").Get<MongoSettings>() ?? new MongoSettings();
 
-// ---------- Repositórios ----------
-builder.Services.AddScoped<IRepository<Tutor>, TutorRepository>();
-builder.Services.AddScoped<IRepository<Pet>, PetRepository>();
-builder.Services.AddScoped<IRepository<Consulta>, ConsultaRepository>();
-builder.Services.AddScoped<IRepository<Lembrete>, LembreteRepository>();
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(oracleConnection, mongoSettings);
 
-builder.Services.AddScoped<ITutorRepository, TutorRepository>();
-builder.Services.AddScoped<IPetRepository, PetRepository>();
-builder.Services.AddScoped<IConsultaRepository, ConsultaRepository>();
-builder.Services.AddScoped<ILembreteRepository, LembreteRepository>();
-builder.Services.AddScoped<IUsuarioRepository, UsuarioRepository>();
-builder.Services.AddSingleton<IPasswordHasher, PasswordHasher>();
-builder.Services.AddScoped<IJwtTokenGenerator, JwtTokenGenerator>();
+builder.Services.AddHttpContextAccessor();
+builder.Services.AddScoped<ICurrentUser, HttpContextCurrentUser>();
 
 // ---------- Tratamento global de exceções (RFC 7807 / ProblemDetails) ----------
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
@@ -95,13 +90,16 @@ builder.Services.AddProblemDetails();
 
 // ---------- Health Checks ----------
 builder.Services.AddHttpClient(ExternalServiceHealthCheck.HttpClientName);
-
 builder.Services.AddHealthChecks()
     .AddCheck("self", () => HealthCheckResult.Healthy("API no ar."), tags: new[] { "live" })
     .AddOracle(
-        connectionString ?? string.Empty,
+        oracleConnection ?? string.Empty,
         name: "oracle_database",
         failureStatus: HealthStatus.Unhealthy,
+        tags: new[] { "ready", "db" })
+    .AddCheck<MongoHealthCheck>(
+        "mongodb",
+        failureStatus: HealthStatus.Degraded,   // auditoria é best-effort: Mongo fora não derruba a API
         tags: new[] { "ready", "db" })
     .AddCheck<ExternalServiceHealthCheck>(
         "external_service",
@@ -121,7 +119,6 @@ builder.Services.AddOpenTelemetry()
         .AddHttpClientInstrumentation()
         .AddRuntimeInstrumentation()
         .AddPrometheusExporter());
-
 
 // ---------- Autenticação JWT ----------
 var jwtSection = builder.Configuration.GetSection("Jwt");
@@ -144,17 +141,22 @@ builder.Services.AddAuthentication(options =>
             ValidAudience = jwtSection["Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(jwtKey))
         };
-        
+
         options.Events = new JwtBearerEvents
         {
             OnAuthenticationFailed = context =>
             {
-                Console.WriteLine($"[JWT FALHOU] {context.Exception.GetType().Name}: {context.Exception.Message}");
+                var logger = context.HttpContext.RequestServices
+                    .GetRequiredService<ILoggerFactory>().CreateLogger("JwtBearer");
+                logger.LogWarning("Falha na autenticação JWT: {Tipo} - {Mensagem}",
+                    context.Exception.GetType().Name, context.Exception.Message);
                 return Task.CompletedTask;
             },
             OnChallenge = context =>
             {
-                Console.WriteLine($"[JWT CHALLENGE] Error: {context.Error}, Description: {context.ErrorDescription}");
+                var logger = context.HttpContext.RequestServices
+                    .GetRequiredService<ILoggerFactory>().CreateLogger("JwtBearer");
+                logger.LogWarning("Desafio JWT: {Erro} - {Descricao}", context.Error, context.ErrorDescription);
                 return Task.CompletedTask;
             }
         };
@@ -188,7 +190,7 @@ app.Use(async (context, next) =>
                     .Replace("\"openapi\": \"3.0.4\"", "\"openapi\": \"3.0.3\"");
 
         context.Response.Body = originalBody;
-        context.Response.ContentLength = System.Text.Encoding.UTF8.GetByteCount(json);
+        context.Response.ContentLength = Encoding.UTF8.GetByteCount(json);
         await context.Response.WriteAsync(json);
     }
     else
@@ -210,12 +212,23 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
 
-
 app.MapControllers();
 
-// GET /health com detalhamento por check em JSON
-app.MapHealthChecks("/health", new Microsoft.AspNetCore.Diagnostics.HealthChecks.HealthCheckOptions
+// GET /health        -> todos os checks (JSON detalhado)
+// GET /health/live   -> apenas "a API está de pé" (liveness)
+// GET /health/ready  -> dependências: Oracle, MongoDB e serviço externo (readiness)
+app.MapHealthChecks("/health", new HealthCheckOptions
 {
+    ResponseWriter = HealthCheckResponseWriter.WriteResponseAsync
+});
+app.MapHealthChecks("/health/live", new HealthCheckOptions
+{
+    Predicate = registration => registration.Tags.Contains("live"),
+    ResponseWriter = HealthCheckResponseWriter.WriteResponseAsync
+});
+app.MapHealthChecks("/health/ready", new HealthCheckOptions
+{
+    Predicate = registration => registration.Tags.Contains("ready"),
     ResponseWriter = HealthCheckResponseWriter.WriteResponseAsync
 });
 

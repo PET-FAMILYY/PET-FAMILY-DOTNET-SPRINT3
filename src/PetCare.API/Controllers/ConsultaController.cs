@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PetCare.API.Hateoas;
+using PetCare.Application.Common;
 using PetCare.Application.DTOs;
-using PetCare.Application.Interfaces;
-using PetCare.Domain.Entities;
-using PetCare.Domain.Exceptions;
+using PetCare.Application.Services;
 
 namespace PetCare.API.Controllers;
 
 /// <summary>
-/// Gerencia consultas veterinárias associadas a um pet.
+/// Gerencia as consultas veterinárias de um pet.
 /// </summary>
 [Authorize]
 [ApiController]
@@ -16,39 +16,41 @@ namespace PetCare.API.Controllers;
 [Produces("application/json")]
 public class ConsultaController : ControllerBase
 {
-    private readonly IConsultaRepository _consultaRepository;
+    private readonly IConsultaService _service;
 
-    public ConsultaController(IConsultaRepository consultaRepository)
-    {
-        _consultaRepository = consultaRepository;
-    }
+    public ConsultaController(IConsultaService service) => _service = service;
 
-    /// <summary>Lista todas as consultas cadastradas.</summary>
-    /// <response code="200">Retorna a lista de consultas.</response>
+    /// <summary>Lista consultas com paginação, ordenação e filtros.</summary>
+    /// <remarks>
+    /// Exemplo: `GET /api/consulta?petId=1&amp;de=2026-01-01&amp;ate=2026-12-31&amp;page=1&amp;pageSize=10&amp;sortBy=dataConsulta&amp;sortDir=desc`.
+    /// Campos de ordenação: Id, DataConsulta, Observacoes, PetId.
+    /// </remarks>
+    /// <response code="200">Página de consultas com links de navegação (HATEOAS).</response>
+    /// <response code="400">Campo de ordenação inválido.</response>
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<ConsultaResponse>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<ConsultaResponse>>> GetAll()
+    [ProducesResponseType(typeof(PagedResult<ConsultaResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<PagedResult<ConsultaResponse>>> GetAll([FromQuery] ConsultaFilter filter)
     {
-        var consultas = await _consultaRepository.GetAllAsync();
-        return Ok(consultas.Select(ToResponse));
+        var result = await _service.ListarAsync(filter);
+        return Ok(result with
+        {
+            Items = result.Items.Select(WithLinks).ToList(),
+            Links = Hateoas.Hateoas.PageLinks(Request, result)
+        });
     }
 
     /// <summary>Busca uma consulta pelo Id.</summary>
     /// <param name="id">Identificador da consulta.</param>
-    /// <response code="200">Consulta encontrada.</response>
+    /// <response code="200">Consulta encontrada (com links HATEOAS).</response>
     /// <response code="404">Consulta não encontrada.</response>
     [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(ConsultaResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ConsultaResponse>> GetById(int id)
-    {
-        var consulta = await _consultaRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Consulta com Id {id} não foi encontrada.");
+        => Ok(WithLinks(await _service.ObterAsync(id)));
 
-        return Ok(ToResponse(consulta));
-    }
-
-    /// <summary>Cadastra uma nova consulta vinculada a um pet existente.</summary>
+    /// <summary>Cadastra uma nova consulta para um pet existente.</summary>
     /// <param name="request">Dados da consulta.</param>
     /// <response code="201">Consulta criada com sucesso.</response>
     /// <response code="400">Dados inválidos.</response>
@@ -59,11 +61,8 @@ public class ConsultaController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ConsultaResponse>> Create(ConsultaRequest request)
     {
-        var consulta = new Consulta(request.DataConsulta, request.Observacoes, request.PetId);
-        await _consultaRepository.AddAsync(consulta);
-
-        var response = ToResponse(consulta);
-        return CreatedAtAction(nameof(GetById), new { id = consulta.Id }, response);
+        var consulta = await _service.CriarAsync(request);
+        return CreatedAtAction(nameof(GetById), new { id = consulta.Id }, WithLinks(consulta));
     }
 
     /// <summary>Atualiza os dados de uma consulta existente.</summary>
@@ -77,15 +76,7 @@ public class ConsultaController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<ConsultaResponse>> Update(int id, ConsultaRequest request)
-    {
-        var consulta = await _consultaRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Consulta com Id {id} não foi encontrada.");
-
-        consulta.Atualizar(request.DataConsulta, request.Observacoes);
-        await _consultaRepository.UpdateAsync(consulta);
-
-        return Ok(ToResponse(consulta));
-    }
+        => Ok(WithLinks(await _service.AtualizarAsync(id, request)));
 
     /// <summary>Remove uma consulta.</summary>
     /// <param name="id">Identificador da consulta.</param>
@@ -96,13 +87,15 @@ public class ConsultaController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(int id)
     {
-        var consulta = await _consultaRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Consulta com Id {id} não foi encontrada.");
-
-        await _consultaRepository.DeleteAsync(consulta);
+        await _service.RemoverAsync(id);
         return NoContent();
     }
 
-    private static ConsultaResponse ToResponse(Consulta consulta)
-        => new(consulta.Id, consulta.DataConsulta, consulta.Observacoes, consulta.PetId);
+    private ConsultaResponse WithLinks(ConsultaResponse consulta) => consulta with
+    {
+        Links = Hateoas.Hateoas.ForItem(
+            self: Url.Action(nameof(GetById), new { id = consulta.Id })!,
+            collection: Url.Action(nameof(GetAll))!,
+            new Link(Url.Action("GetById", "Pet", new { id = consulta.PetId })!, "pet", "GET"))
+    };
 }

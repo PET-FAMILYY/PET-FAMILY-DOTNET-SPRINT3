@@ -1,14 +1,14 @@
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using PetCare.API.Hateoas;
+using PetCare.Application.Common;
 using PetCare.Application.DTOs;
-using PetCare.Application.Interfaces;
-using PetCare.Domain.Entities;
-using PetCare.Domain.Exceptions;
+using PetCare.Application.Services;
 
 namespace PetCare.API.Controllers;
 
 /// <summary>
-/// Gerencia lembretes (vacinas, retornos, medicações) associados a um pet.
+/// Gerencia os lembretes (vacinas, retornos etc.) de um pet.
 /// </summary>
 [Authorize]
 [ApiController]
@@ -16,42 +16,44 @@ namespace PetCare.API.Controllers;
 [Produces("application/json")]
 public class LembreteController : ControllerBase
 {
-    private readonly ILembreteRepository _lembreteRepository;
+    private readonly ILembreteService _service;
 
-    public LembreteController(ILembreteRepository lembreteRepository)
-    {
-        _lembreteRepository = lembreteRepository;
-    }
+    public LembreteController(ILembreteService service) => _service = service;
 
-    /// <summary>Lista todos os lembretes cadastrados.</summary>
-    /// <response code="200">Retorna a lista de lembretes.</response>
+    /// <summary>Lista lembretes com paginação, ordenação e filtros.</summary>
+    /// <remarks>
+    /// Exemplo: `GET /api/lembrete?petId=1&amp;titulo=vacina&amp;de=2026-01-01&amp;page=1&amp;pageSize=10&amp;sortBy=dataLembrete&amp;sortDir=asc`.
+    /// Campos de ordenação: Id, Titulo, Descricao, DataLembrete, PetId.
+    /// </remarks>
+    /// <response code="200">Página de lembretes com links de navegação (HATEOAS).</response>
+    /// <response code="400">Campo de ordenação inválido.</response>
     [HttpGet]
-    [ProducesResponseType(typeof(IEnumerable<LembreteResponse>), StatusCodes.Status200OK)]
-    public async Task<ActionResult<IEnumerable<LembreteResponse>>> GetAll()
+    [ProducesResponseType(typeof(PagedResult<LembreteResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    public async Task<ActionResult<PagedResult<LembreteResponse>>> GetAll([FromQuery] LembreteFilter filter)
     {
-        var lembretes = await _lembreteRepository.GetAllAsync();
-        return Ok(lembretes.Select(ToResponse));
+        var result = await _service.ListarAsync(filter);
+        return Ok(result with
+        {
+            Items = result.Items.Select(WithLinks).ToList(),
+            Links = Hateoas.Hateoas.PageLinks(Request, result)
+        });
     }
 
     /// <summary>Busca um lembrete pelo Id.</summary>
     /// <param name="id">Identificador do lembrete.</param>
-    /// <response code="200">Lembrete encontrado.</response>
+    /// <response code="200">Lembrete encontrado (com links HATEOAS).</response>
     /// <response code="404">Lembrete não encontrado.</response>
     [HttpGet("{id:int}")]
     [ProducesResponseType(typeof(LembreteResponse), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<LembreteResponse>> GetById(int id)
-    {
-        var lembrete = await _lembreteRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Lembrete com Id {id} não foi encontrado.");
+        => Ok(WithLinks(await _service.ObterAsync(id)));
 
-        return Ok(ToResponse(lembrete));
-    }
-
-    /// <summary>Cadastra um novo lembrete vinculado a um pet existente.</summary>
+    /// <summary>Cadastra um novo lembrete para um pet existente.</summary>
     /// <param name="request">Dados do lembrete.</param>
     /// <response code="201">Lembrete criado com sucesso.</response>
-    /// <response code="400">Dados inválidos.</response>
+    /// <response code="400">Dados inválidos (ex.: data anterior à atual).</response>
     /// <response code="404">Pet referenciado não foi encontrado.</response>
     [HttpPost]
     [ProducesResponseType(typeof(LembreteResponse), StatusCodes.Status201Created)]
@@ -59,11 +61,8 @@ public class LembreteController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<LembreteResponse>> Create(LembreteRequest request)
     {
-        var lembrete = new Lembrete(request.Titulo, request.Descricao, request.DataLembrete, request.PetId);
-        await _lembreteRepository.AddAsync(lembrete);
-
-        var response = ToResponse(lembrete);
-        return CreatedAtAction(nameof(GetById), new { id = lembrete.Id }, response);
+        var lembrete = await _service.CriarAsync(request);
+        return CreatedAtAction(nameof(GetById), new { id = lembrete.Id }, WithLinks(lembrete));
     }
 
     /// <summary>Atualiza os dados de um lembrete existente.</summary>
@@ -77,15 +76,7 @@ public class LembreteController : ControllerBase
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<ActionResult<LembreteResponse>> Update(int id, LembreteRequest request)
-    {
-        var lembrete = await _lembreteRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Lembrete com Id {id} não foi encontrado.");
-
-        lembrete.Atualizar(request.Titulo, request.Descricao, request.DataLembrete);
-        await _lembreteRepository.UpdateAsync(lembrete);
-
-        return Ok(ToResponse(lembrete));
-    }
+        => Ok(WithLinks(await _service.AtualizarAsync(id, request)));
 
     /// <summary>Remove um lembrete.</summary>
     /// <param name="id">Identificador do lembrete.</param>
@@ -96,13 +87,15 @@ public class LembreteController : ControllerBase
     [ProducesResponseType(StatusCodes.Status404NotFound)]
     public async Task<IActionResult> Delete(int id)
     {
-        var lembrete = await _lembreteRepository.GetByIdAsync(id)
-            ?? throw new ResourceNotFoundException($"Lembrete com Id {id} não foi encontrado.");
-
-        await _lembreteRepository.DeleteAsync(lembrete);
+        await _service.RemoverAsync(id);
         return NoContent();
     }
 
-    private static LembreteResponse ToResponse(Lembrete lembrete)
-        => new(lembrete.Id, lembrete.Titulo, lembrete.Descricao, lembrete.DataLembrete, lembrete.PetId);
+    private LembreteResponse WithLinks(LembreteResponse lembrete) => lembrete with
+    {
+        Links = Hateoas.Hateoas.ForItem(
+            self: Url.Action(nameof(GetById), new { id = lembrete.Id })!,
+            collection: Url.Action(nameof(GetAll))!,
+            new Link(Url.Action("GetById", "Pet", new { id = lembrete.PetId })!, "pet", "GET"))
+    };
 }
