@@ -443,8 +443,8 @@ Resultado medido em 27/10/2026:
 | `PetCare.Domain` | 82,6% |
 | **Total (Domain + Application)** | **88,1%** (326 de 370 linhas) |
 
-Cobertura de branches: 79,3%; de métodos: 86,6%. O relatório HTML é gerado em `coverage/report/index.html`.
-
+Cobertura de branches: 79,3%; de métodos: 86,6%. O relatório HTML é gerado localmente em `coverage/report/index.html` (pasta ignorada pelo git).
+O resumo da última medição está versionado em [`docs/coverage-summary.txt`](docs/coverage-summary.txt).
 ### Compartilhamento de fixture entre testes (ICollectionFixture)
 
 As classes de teste de integração compartilham uma única instância de `CustomWebApplicationFactory` (e do mesmo banco InMemory) através de uma coleção xUnit, em vez de recriar a fábrica a cada classe:
