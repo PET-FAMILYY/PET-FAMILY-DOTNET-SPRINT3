@@ -4,3 +4,8 @@ obj/
 .vs/
 logs/
 appsettings.*.local.json
+.idea/
+.vscode/
+coverage/
+TestResults/
+*.DotSettings.user
