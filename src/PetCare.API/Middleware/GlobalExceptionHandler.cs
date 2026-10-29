@@ -59,6 +59,7 @@ public class GlobalExceptionHandler : IExceptionHandler
     {
         ArgumentException => (StatusCodes.Status400BadRequest, "Requisição inválida."),
         DomainException => (StatusCodes.Status400BadRequest, "Regra de negócio violada."),
+        AuthenticationFailedException => (StatusCodes.Status401Unauthorized, "Falha de autenticação."),
         ResourceNotFoundException => (StatusCodes.Status404NotFound, "Recurso não encontrado."),
         KeyNotFoundException => (StatusCodes.Status404NotFound, "Recurso não encontrado."),
         ConflictException => (StatusCodes.Status409Conflict, "Conflito de estado."),
