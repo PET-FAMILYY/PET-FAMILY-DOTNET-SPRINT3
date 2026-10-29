@@ -501,6 +501,7 @@ Durante a implementação, os seguintes problemas foram identificados e corrigid
 | `401` persistindo mesmo após anexar o token nos testes | Ordem incorreta dos middlewares no `Program.cs`: `UseAuthorization()` estava sendo chamado **antes** de `UseAuthentication()` | Corrigir a ordem para `UseAuthentication()` → `UseAuthorization()` (autorização depende do `HttpContext.User` já populado pela autenticação) |
 | Swagger UI não carregava o `swagger.json` | A UI embutida do Swashbuckle 10.x não reconhece o patch `3.0.4` do OpenAPI | Middleware que reescreve `"openapi": "3.0.4"` para `"3.0.3"` na resposta do `swagger.json` |
 | Gravação de auditoria lenta se o MongoDB estiver fora do ar | O driver espera 30 s pela seleção de servidor por padrão | `ServerSelectionTimeout` de 3 s e gravação *best-effort* (erro logado, operação de negócio preservada) |
+| Botão Authorize exigia digitar `Bearer ` manualmente | Esquema de segurança declarado como `ApiKey` | Trocado para `SecuritySchemeType.Http` com `Scheme = "bearer"` |
 
 ## 12. Boas práticas de segurança (produção)
 
