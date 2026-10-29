@@ -362,6 +362,44 @@ O check de serviço externo faz um GET com timeout de 3 segundos. URL e timeout 
 
 ## 8. Como executar
 
+### Opção rápida: tudo em Docker (recomendada)
+
+Pré-requisito: Docker. Nenhum Oracle, Mongo ou .NET instalados.
+
+```bash
+docker compose up -d --build
+```
+
+Aguarde o Oracle ficar saudável (1ª vez: alguns minutos; acompanhe com `docker compose logs -f api`).
+As migrations são aplicadas automaticamente na subida da API.
+
+| Serviço | URL |
+|---|---|
+| Swagger | http://localhost:5080/swagger |
+| Health check | http://localhost:5080/health |
+| Métricas | http://localhost:5080/metrics |
+
+**Testando em 3 comandos** (usuário de teste):
+
+```bash
+# 1) registrar
+curl -X POST http://localhost:5080/api/auth/register -H 'Content-Type: application/json' \
+  -d '{"nome":"Avaliador","email":"avaliador@petcare.com","senha":"123456"}'
+
+# 2) login -> copie o campo "token"
+curl -X POST http://localhost:5080/api/auth/login -H 'Content-Type: application/json' \
+  -d '{"email":"avaliador@petcare.com","senha":"123456"}'
+
+# 3) usar o token
+curl http://localhost:5080/api/tutor -H "Authorization: Bearer SEU_TOKEN"
+```
+
+Para parar e apagar os dados: `docker compose down -v`.
+
+### Opção manual (API local, bancos no Docker)
+
+(mantenha aqui o conteúdo atual: pré-requisitos, user-secrets, `dotnet ef database update`, `dotnet run`)
+
 ### Pré-requisitos
 
 - .NET 10 SDK
