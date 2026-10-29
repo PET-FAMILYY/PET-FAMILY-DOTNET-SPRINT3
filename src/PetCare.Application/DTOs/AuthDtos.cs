@@ -1,9 +1,16 @@
-﻿namespace PetCare.Application.DTOs;
+﻿using System.ComponentModel.DataAnnotations;
 
-public record RegisterRequest(string Nome, string Email, string Senha);
+namespace PetCare.Application.DTOs;
 
-public record LoginRequest(string Email, string Senha);
-
-public record LoginResponse(string Token, DateTime ExpiraEm, string Nome, string Email, string Role);
+public record RegisterRequest(
+    [Required, StringLength(200)] string Nome,
+    [Required, EmailAddress, StringLength(200)] string Email,
+    [Required, StringLength(100, MinimumLength = 6)] string Senha);
 
 public record RegisterResponse(int Id, string Nome, string Email);
+
+public record LoginRequest(
+    [Required, EmailAddress] string Email,
+    [Required] string Senha);
+
+public record LoginResponse(string Token, DateTime ExpiraEm, string Nome, string Email, string Role);

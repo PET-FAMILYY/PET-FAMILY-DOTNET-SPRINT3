@@ -17,7 +17,8 @@ using PetCare.Infrastructure;
 using PetCare.Infrastructure.HealthChecks;
 using PetCare.Infrastructure.Mongo;
 using Serilog;
-using Serilog.Enrichers.CorrelationId;
+using Microsoft.EntityFrameworkCore;
+using PetCare.Infrastructure.Persistence;
 
 const string ServiceName = "PetCare.API";
 
@@ -84,7 +85,12 @@ builder.Services.AddScoped<ICurrentUser, HttpContextCurrentUser>();
 
 // ---------- Tratamento global de exceções (RFC 7807 / ProblemDetails) ----------
 builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
-builder.Services.AddProblemDetails();
+builder.Services.AddProblemDetails(options =>
+{
+    // Garante traceId também nos ProblemDetails gerados pelo framework (validação, 401, 404...)
+    options.CustomizeProblemDetails = context =>
+        context.ProblemDetails.Extensions["traceId"] = context.HttpContext.TraceIdentifier;
+});
 
 // ---------- Health Checks ----------
 builder.Services.AddHttpClient(ExternalServiceHealthCheck.HttpClientName);
@@ -164,9 +170,16 @@ builder.Services.AddAuthorization();
 
 var app = builder.Build();
 
+if (app.Configuration.GetValue<bool>("Database:MigrateOnStartup"))
+{
+    using var scope = app.Services.CreateScope();
+    var db = scope.ServiceProvider.GetRequiredService<PetCareContext>();
+    await db.Database.MigrateAsync();
+}
+
 // ---------- Pipeline ----------
 app.UseExceptionHandler(_ => { }); // delega para o GlobalExceptionHandler registrado acima
-
+app.UseStatusCodePages(); // 401/403/404 sem corpo passam a sair como ProblemDetails
 app.UseSerilogRequestLogging();
 
 // Workaround: a UI embutida do Swashbuckle 10.x nao reconhece o patch "3.0.4"

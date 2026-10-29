@@ -1,19 +1,12 @@
-using System;
-using System.Collections.Generic;
-using System.Threading;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Diagnostics;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.Extensions.Hosting;
-using Microsoft.Extensions.Logging;
 using PetCare.Domain.Exceptions;
 
 namespace PetCare.API.Middleware;
 
 /// <summary>
-/// Handler global de exceções que converte erros não tratados em respostas
-/// no padrão RFC 7807 (ProblemDetails), incluindo o traceId da requisição.
+/// Converte exceções em respostas RFC 7807 (ProblemDetails) com traceId para correlação com os logs.
+/// Erros do cliente (4xx) são logados como Warning; falhas do servidor (5xx) como Error.
 /// </summary>
 public class GlobalExceptionHandler : IExceptionHandler
 {
@@ -33,9 +26,14 @@ public class GlobalExceptionHandler : IExceptionHandler
     {
         var (statusCode, title) = MapException(exception);
 
-        _logger.LogError(exception,
-            "Erro não tratado ({StatusCode}) na requisição {TraceId}: {Message}",
-            statusCode, httpContext.TraceIdentifier, exception.Message);
+        if (statusCode >= StatusCodes.Status500InternalServerError)
+            _logger.LogError(exception,
+                "Erro interno ({StatusCode}) na requisição {TraceId}: {Message}",
+                statusCode, httpContext.TraceIdentifier, exception.Message);
+        else
+            _logger.LogWarning(
+                "Requisição rejeitada ({StatusCode}) {TraceId}: {Tipo} - {Message}",
+                statusCode, httpContext.TraceIdentifier, exception.GetType().Name, exception.Message);
 
         var problemDetails = new ProblemDetails
         {
@@ -57,9 +55,9 @@ public class GlobalExceptionHandler : IExceptionHandler
 
     private static (int StatusCode, string Title) MapException(Exception exception) => exception switch
     {
+        AuthenticationFailedException => (StatusCodes.Status401Unauthorized, "Falha de autenticação."),
         ArgumentException => (StatusCodes.Status400BadRequest, "Requisição inválida."),
         DomainException => (StatusCodes.Status400BadRequest, "Regra de negócio violada."),
-        AuthenticationFailedException => (StatusCodes.Status401Unauthorized, "Falha de autenticação."),
         ResourceNotFoundException => (StatusCodes.Status404NotFound, "Recurso não encontrado."),
         KeyNotFoundException => (StatusCodes.Status404NotFound, "Recurso não encontrado."),
         ConflictException => (StatusCodes.Status409Conflict, "Conflito de estado."),
