@@ -157,8 +157,7 @@ Todos os endpoints de Tutor, Pet, Consulta, Lembrete e Auditoria exigem autentic
 
    > Atenção: o header precisa do prefixo `Bearer ` (com espaço) antes do token, senão a API retorna `401 Unauthorized`.
 
-4. **Pelo Swagger:** clique no botão **Authorize** (cadeado no topo) e cole `Bearer {seu token}`. Todas as chamadas feitas pela UI passam a incluir o header automaticamente.
-
+4. **Pelo Swagger:** clique em **Authorize** (cadeado) e cole **apenas o token** retornado pelo login. A UI envia o header `Authorization: Bearer ...` automaticamente.
 ### Endpoints de autenticação
 
 | Método | Rota | Descrição | Códigos de retorno |
