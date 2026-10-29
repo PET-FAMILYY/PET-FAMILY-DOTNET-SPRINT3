@@ -1,9 +1,4 @@
-using System;
-using System.Threading.Tasks;
-using Moq;
-using PetCare.Application.Interfaces;
 using PetCare.Domain.Entities;
-using PetCare.Domain.Exceptions;
 using PetCare.Infrastructure.Repositories;
 using Xunit;
 
@@ -12,14 +7,11 @@ namespace PetCare.Application.Tests;
 public class ConsultaRepositoryTests
 {
     [Fact]
-    public async Task AddAsync_PetExistente_PersisteConsultaComSucesso()
+    public async Task AddAsync_ConsultaValida_PersisteEGeraId()
     {
         // Arrange
         using var context = InMemoryContextFactory.Create();
-        var petRepositoryMock = new Mock<IRepository<Pet>>();
-        petRepositoryMock.Setup(r => r.ExistsByIdAsync(1)).ReturnsAsync(true);
-
-        var repository = new ConsultaRepository(context, petRepositoryMock.Object);
+        var repository = new ConsultaRepository(context);
         var consulta = new Consulta(DateTime.UtcNow.AddDays(1), "Consulta de rotina", 1);
 
         // Act
@@ -27,26 +19,24 @@ public class ConsultaRepositoryTests
 
         // Assert
         Assert.NotEqual(0, resultado.Id);
-        petRepositoryMock.Verify(r => r.ExistsByIdAsync(1), Times.Once);
+        Assert.Single(context.Consultas);
     }
 
     [Fact]
-    public async Task AddAsync_PetInexistente_LancaResourceNotFoundExceptionENaoPersiste()
+    public async Task GetByPetIdAsync_ConsultasCadastradas_RetornaSomenteConsultasDoPet()
     {
         // Arrange
         using var context = InMemoryContextFactory.Create();
-        var petRepositoryMock = new Mock<IRepository<Pet>>();
-        petRepositoryMock.Setup(r => r.ExistsByIdAsync(999)).ReturnsAsync(false);
-
-        var repository = new ConsultaRepository(context, petRepositoryMock.Object);
-        var consulta = new Consulta(DateTime.UtcNow.AddDays(1), "Consulta de rotina", 999);
+        var repository = new ConsultaRepository(context);
+        await repository.AddAsync(new Consulta(DateTime.UtcNow.AddDays(1), "Rotina", 1));
+        await repository.AddAsync(new Consulta(DateTime.UtcNow.AddDays(2), "Retorno", 1));
+        await repository.AddAsync(new Consulta(DateTime.UtcNow.AddDays(3), "Vacina", 2));
 
         // Act
-        var exception = await Record.ExceptionAsync(() => repository.AddAsync(consulta));
+        var resultado = (await repository.GetByPetIdAsync(1)).ToList();
 
         // Assert
-        Assert.IsType<ResourceNotFoundException>(exception);
-        petRepositoryMock.Verify(r => r.ExistsByIdAsync(999), Times.Once);
-        Assert.Empty(context.Consultas);
+        Assert.Equal(2, resultado.Count);
+        Assert.All(resultado, c => Assert.Equal(1, c.PetId));
     }
 }

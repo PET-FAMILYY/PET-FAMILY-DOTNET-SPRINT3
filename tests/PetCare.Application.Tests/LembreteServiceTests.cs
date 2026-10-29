@@ -14,18 +14,20 @@ namespace PetCare.Application.Tests;
 public class LembreteServiceTests
 {
     private readonly Mock<ILembreteRepository> _repository = new();
+    private readonly Mock<IPetRepository> _pets = new();
     private readonly Mock<IAuditTrail> _audit = new();
     private readonly LembreteService _service;
 
     public LembreteServiceTests()
     {
-        _service = new LembreteService(_repository.Object, _audit.Object);
+        _service = new LembreteService(_repository.Object, _pets.Object , _audit.Object);
     }
 
     [Fact]
     public async Task CriarAsync_DadosValidos_PersisteERegistraAuditoria()
     {
         // Arrange
+        _pets.Setup(r => r.ExistsByIdAsync(1)).ReturnsAsync(true);
         _repository.Setup(r => r.AddAsync(It.IsAny<Lembrete>())).ReturnsAsync((Lembrete l) => l);
         var request = new LembreteRequest("Vacina", "Antirrábica", DateTime.UtcNow.AddDays(5), 1);
 
@@ -51,6 +53,19 @@ public class LembreteServiceTests
         _audit.Verify(a => a.RegistrarAsync(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string?>()), Times.Never);
     }
 
+    [Fact]
+    public async Task CriarAsync_PetInexistente_LancaResourceNotFoundExceptionENaoPersiste()
+    {
+        // Arrange
+        _pets.Setup(r => r.ExistsByIdAsync(999)).ReturnsAsync(false);
+        var request = new LembreteRequest("Vacina", "Reforço anual", DateTime.UtcNow.AddDays(2), 999);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<ResourceNotFoundException>(() => _service.CriarAsync(request));
+        _repository.Verify(r => r.AddAsync(It.IsAny<Lembrete>()), Times.Never);
+        _audit.Verify(a => a.RegistrarAsync(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string?>()), Times.Never);
+    }
+    
     [Fact]
     public async Task ObterAsync_LembreteInexistente_LancaResourceNotFoundException()
     {

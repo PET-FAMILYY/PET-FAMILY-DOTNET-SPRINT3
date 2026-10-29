@@ -14,18 +14,20 @@ namespace PetCare.Application.Tests;
 public class PetServiceTests
 {
     private readonly Mock<IPetRepository> _repository = new();
+    private readonly Mock<ITutorRepository> _tutores = new();
     private readonly Mock<IAuditTrail> _audit = new();
     private readonly PetService _service;
 
     public PetServiceTests()
     {
-        _service = new PetService(_repository.Object, _audit.Object);
+        _service = new PetService(_repository.Object, _tutores.Object, _audit.Object);
     }
 
     [Fact]
     public async Task CriarAsync_DadosValidos_PersistePetERegistraAuditoria()
     {
         // Arrange
+        _tutores.Setup(r => r.ExistsByIdAsync(1)).ReturnsAsync(true);
         _repository.Setup(r => r.AddAsync(It.IsAny<Pet>())).ReturnsAsync((Pet p) => p);
         var request = new PetRequest("Rex", "Cachorro", null, DateTime.UtcNow.AddYears(-1), 1);
 
@@ -37,6 +39,20 @@ public class PetServiceTests
         _repository.Verify(r => r.AddAsync(It.IsAny<Pet>()), Times.Once);
         _audit.Verify(a => a.RegistrarAsync("Pet", It.IsAny<int>(), "Criacao", It.IsAny<string?>()), Times.Once);
     }
+    
+    [Fact]
+    public async Task CriarAsync_TutorInexistente_LancaResourceNotFoundExceptionENaoPersiste()
+    {
+        // Arrange
+        _tutores.Setup(r => r.ExistsByIdAsync(999)).ReturnsAsync(false);
+        var request = new PetRequest("Rex", "Cachorro", null, DateTime.UtcNow.AddYears(-1), 999);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<ResourceNotFoundException>(() => _service.CriarAsync(request));
+        _repository.Verify(r => r.AddAsync(It.IsAny<Pet>()), Times.Never);
+        _audit.Verify(a => a.RegistrarAsync(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string?>()), Times.Never);
+    }
+    
 
     [Fact]
     public async Task CriarAsync_DataNascimentoFutura_LancaDomainExceptionENaoPersiste()

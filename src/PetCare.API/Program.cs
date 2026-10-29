@@ -60,12 +60,10 @@ builder.Services.AddSwaggerGen(options =>
 
     options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
     {
-        Name = "Authorization",
-        Type = SecuritySchemeType.ApiKey,
-        Scheme = "Bearer",
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
         BearerFormat = "JWT",
-        In = ParameterLocation.Header,
-        Description = "Informe: Bearer {seu token}"
+        Description = "Informe apenas o token JWT retornado por POST /api/auth/login (sem o prefixo 'Bearer')."
     });
 
     options.AddSecurityRequirement(document => new OpenApiSecurityRequirement
@@ -199,7 +197,7 @@ app.Use(async (context, next) =>
     }
 });
 
-if (app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment() || app.Configuration.GetValue("Swagger:Enabled", true))
 {
     app.UseSwagger();
     app.UseSwaggerUI(options =>

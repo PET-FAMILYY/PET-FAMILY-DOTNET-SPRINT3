@@ -13,14 +13,11 @@ namespace PetCare.Application.Tests;
 public class PetRepositoryTests
 {
     [Fact]
-    public async Task AddAsync_TutorExistente_PersistePetComSucesso()
+    public async Task AddAsync_PetValido_PersisteEGeraId()
     {
         // Arrange
         using var context = InMemoryContextFactory.Create();
-        var tutorRepositoryMock = new Mock<IRepository<Tutor>>();
-        tutorRepositoryMock.Setup(r => r.ExistsByIdAsync(1)).ReturnsAsync(true);
-
-        var repository = new PetRepository(context, tutorRepositoryMock.Object);
+        var repository = new PetRepository(context);
         var pet = new Pet("Rex", "Cachorro", "Labrador", DateTime.UtcNow.AddYears(-1), 1);
 
         // Act
@@ -28,27 +25,7 @@ public class PetRepositoryTests
 
         // Assert
         Assert.NotEqual(0, resultado.Id);
-        tutorRepositoryMock.Verify(r => r.ExistsByIdAsync(1), Times.Once);
         Assert.Single(context.Pets);
-    }
-
-    [Fact]
-    public async Task AddAsync_TutorInexistente_LancaResourceNotFoundExceptionENaoPersiste()
-    {
-        // Arrange
-        using var context = InMemoryContextFactory.Create();
-        var tutorRepositoryMock = new Mock<IRepository<Tutor>>();
-        tutorRepositoryMock.Setup(r => r.ExistsByIdAsync(999)).ReturnsAsync(false);
-
-        var repository = new PetRepository(context, tutorRepositoryMock.Object);
-        var pet = new Pet("Rex", "Cachorro", "Labrador", DateTime.UtcNow.AddYears(-1), 999);
-
-        // Act
-        var exception = await Record.ExceptionAsync(() => repository.AddAsync(pet));
-
-        // Assert
-        Assert.IsType<ResourceNotFoundException>(exception);
-        Assert.Empty(context.Pets);
     }
 
     [Fact]
@@ -56,10 +33,7 @@ public class PetRepositoryTests
     {
         // Arrange
         using var context = InMemoryContextFactory.Create();
-        var tutorRepositoryMock = new Mock<IRepository<Tutor>>();
-        tutorRepositoryMock.Setup(r => r.ExistsByIdAsync(It.IsAny<int>())).ReturnsAsync(true);
-
-        var repository = new PetRepository(context, tutorRepositoryMock.Object);
+        var repository = new PetRepository(context);
         await repository.AddAsync(new Pet("Rex", "Cachorro", null, DateTime.UtcNow.AddYears(-1), 1));
         await repository.AddAsync(new Pet("Miau", "Gato", null, DateTime.UtcNow.AddYears(-2), 2));
 

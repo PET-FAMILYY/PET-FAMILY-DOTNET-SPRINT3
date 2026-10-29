@@ -11,11 +11,13 @@ namespace PetCare.Application.Services;
 public class LembreteService : ILembreteService
 {
     private readonly ILembreteRepository _lembretes;
+    private readonly IPetRepository _pets;
     private readonly IAuditTrail _audit;
 
-    public LembreteService(ILembreteRepository lembretes, IAuditTrail audit)
+    public LembreteService(ILembreteRepository lembretes, IPetRepository pets, IAuditTrail audit)
     {
         _lembretes = lembretes;
+        _pets = pets;
         _audit = audit;
     }
 
@@ -42,6 +44,10 @@ public class LembreteService : ILembreteService
     public async Task<LembreteResponse> CriarAsync(LembreteRequest request)
     {
         var lembrete = new Lembrete(request.Titulo, request.Descricao, request.DataLembrete, request.PetId);
+
+        if (!await _pets.ExistsByIdAsync(request.PetId))
+            throw new ResourceNotFoundException($"Pet com Id {request.PetId} não foi encontrado.");
+
         await _lembretes.AddAsync(lembrete);
         await _audit.RegistrarAsync("Lembrete", lembrete.Id, "Criacao", $"Lembrete '{lembrete.Titulo}' criado.");
         return ToResponse(lembrete);

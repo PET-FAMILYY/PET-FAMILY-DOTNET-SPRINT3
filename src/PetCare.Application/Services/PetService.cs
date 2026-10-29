@@ -11,11 +11,13 @@ namespace PetCare.Application.Services;
 public class PetService : IPetService
 {
     private readonly IPetRepository _pets;
+    private readonly ITutorRepository _tutores;
     private readonly IAuditTrail _audit;
 
-    public PetService(IPetRepository pets, IAuditTrail audit)
+    public PetService(IPetRepository pets, ITutorRepository tutores, IAuditTrail audit)
     {
         _pets = pets;
+        _tutores = tutores;
         _audit = audit;
     }
 
@@ -39,7 +41,12 @@ public class PetService : IPetService
 
     public async Task<PetResponse> CriarAsync(PetRequest request)
     {
+        // Constrói primeiro: as invariantes do domínio (nome, espécie, data) falham antes de consultar o banco.
         var pet = new Pet(request.Nome, request.Especie, request.Raca, request.DataNascimento, request.TutorId);
+
+        if (!await _tutores.ExistsByIdAsync(request.TutorId))
+            throw new ResourceNotFoundException($"Tutor com Id {request.TutorId} não foi encontrado.");
+
         await _pets.AddAsync(pet);
         await _audit.RegistrarAsync("Pet", pet.Id, "Criacao", $"Pet '{pet.Nome}' cadastrado para o tutor {pet.TutorId}.");
         return ToResponse(pet);

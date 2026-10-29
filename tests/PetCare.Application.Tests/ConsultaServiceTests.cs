@@ -11,20 +11,21 @@ using Xunit;
 namespace PetCare.Application.Tests;
 
 public class ConsultaServiceTests
-{
-    private readonly Mock<IConsultaRepository> _repository = new();
+{private readonly Mock<IConsultaRepository> _repository = new();
+    private readonly Mock<IPetRepository> _pets = new();
     private readonly Mock<IAuditTrail> _audit = new();
     private readonly ConsultaService _service;
 
     public ConsultaServiceTests()
     {
-        _service = new ConsultaService(_repository.Object, _audit.Object);
+        _service = new ConsultaService(_repository.Object, _pets.Object, _audit.Object);
     }
 
     [Fact]
     public async Task CriarAsync_DadosValidos_PersisteERegistraAuditoria()
     {
         // Arrange
+        _pets.Setup(r => r.ExistsByIdAsync(1)).ReturnsAsync(true);
         _repository.Setup(r => r.AddAsync(It.IsAny<Consulta>())).ReturnsAsync((Consulta c) => c);
         var request = new ConsultaRequest(DateTime.UtcNow.AddDays(3), "Rotina", 1);
 
@@ -35,6 +36,19 @@ public class ConsultaServiceTests
         Assert.Equal(1, resposta.PetId);
         _repository.Verify(r => r.AddAsync(It.IsAny<Consulta>()), Times.Once);
         _audit.Verify(a => a.RegistrarAsync("Consulta", It.IsAny<int>(), "Criacao", It.IsAny<string?>()), Times.Once);
+    }
+    
+    [Fact]
+    public async Task CriarAsync_PetInexistente_LancaResourceNotFoundExceptionENaoPersiste()
+    {
+        // Arrange
+        _pets.Setup(r => r.ExistsByIdAsync(999)).ReturnsAsync(false);
+        var request = new ConsultaRequest(DateTime.UtcNow.AddDays(3), "Rotina", 999);
+
+        // Act & Assert
+        await Assert.ThrowsAsync<ResourceNotFoundException>(() => _service.CriarAsync(request));
+        _repository.Verify(r => r.AddAsync(It.IsAny<Consulta>()), Times.Never);
+        _audit.Verify(a => a.RegistrarAsync(It.IsAny<string>(), It.IsAny<int>(), It.IsAny<string>(), It.IsAny<string?>()), Times.Never);
     }
 
     [Fact]

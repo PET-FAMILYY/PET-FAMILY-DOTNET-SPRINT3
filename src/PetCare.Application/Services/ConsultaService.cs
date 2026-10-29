@@ -11,11 +11,13 @@ namespace PetCare.Application.Services;
 public class ConsultaService : IConsultaService
 {
     private readonly IConsultaRepository _consultas;
+    private readonly IPetRepository _pets;
     private readonly IAuditTrail _audit;
 
-    public ConsultaService(IConsultaRepository consultas, IAuditTrail audit)
+    public ConsultaService(IConsultaRepository consultas, IPetRepository pets, IAuditTrail audit)
     {
         _consultas = consultas;
+        _pets = pets;
         _audit = audit;
     }
 
@@ -40,6 +42,10 @@ public class ConsultaService : IConsultaService
     public async Task<ConsultaResponse> CriarAsync(ConsultaRequest request)
     {
         var consulta = new Consulta(request.DataConsulta, request.Observacoes, request.PetId);
+
+        if (!await _pets.ExistsByIdAsync(request.PetId))
+            throw new ResourceNotFoundException($"Pet com Id {request.PetId} não foi encontrado.");
+
         await _consultas.AddAsync(consulta);
         await _audit.RegistrarAsync("Consulta", consulta.Id, "Criacao", $"Consulta do pet {consulta.PetId} agendada.");
         return ToResponse(consulta);
