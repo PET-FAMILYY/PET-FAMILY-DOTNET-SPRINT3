@@ -1,11 +1,8 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
 using PetCare.Domain.Entities;
 using PetCare.Infrastructure.Repositories;
 using Xunit;
 
-namespace PetCare.Application.Tests;
+namespace PetCare.Infrastructure.Tests;
 
 public class LembreteRepositoryTests
 {

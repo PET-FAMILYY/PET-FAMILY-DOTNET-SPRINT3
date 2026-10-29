@@ -3,7 +3,7 @@ using PetCare.Domain.Entities;
 using PetCare.Infrastructure.Repositories;
 using Xunit;
 
-namespace PetCare.Application.Tests;
+namespace PetCare.Infrastructure.Tests;
 
 public class TutorRepositoryTests
 {

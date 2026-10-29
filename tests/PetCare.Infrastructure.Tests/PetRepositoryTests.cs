@@ -1,14 +1,8 @@
-using System;
-using System.Linq;
-using System.Threading.Tasks;
-using Moq;
-using PetCare.Application.Interfaces;
 using PetCare.Domain.Entities;
-using PetCare.Domain.Exceptions;
 using PetCare.Infrastructure.Repositories;
 using Xunit;
 
-namespace PetCare.Application.Tests;
+namespace PetCare.Infrastructure.Tests;
 
 public class PetRepositoryTests
 {

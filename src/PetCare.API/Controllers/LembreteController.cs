@@ -27,17 +27,12 @@ public class LembreteController : ControllerBase
     /// </remarks>
     /// <response code="200">Página de lembretes com links de navegação (HATEOAS).</response>
     /// <response code="400">Campo de ordenação inválido.</response>
-    [HttpGet]
-    [ProducesResponseType(typeof(PagedResult<LembreteResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(PagedResponse<LembreteResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<PagedResult<LembreteResponse>>> GetAll([FromQuery] LembreteFilter filter)
+    public async Task<ActionResult<PagedResponse<LembreteResponse>>> GetAll([FromQuery] LembreteFilter filter)
     {
-        var result = await _service.ListarAsync(filter);
-        return Ok(result with
-        {
-            Items = result.Items.Select(WithLinks).ToList(),
-            Links = Hateoas.Hateoas.PageLinks(Request, result)
-        });
+        var page = (await _service.ListarAsync(filter)).Map(WithLinks);
+        return Ok(PagedResponse<LembreteResponse>.From(page, Hateoas.Hateoas.PageLinks(Request, page)));
     }
 
     /// <summary>Busca um lembrete pelo Id.</summary>

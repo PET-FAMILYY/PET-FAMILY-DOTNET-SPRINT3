@@ -27,17 +27,12 @@ public class ConsultaController : ControllerBase
     /// </remarks>
     /// <response code="200">Página de consultas com links de navegação (HATEOAS).</response>
     /// <response code="400">Campo de ordenação inválido.</response>
-    [HttpGet]
-    [ProducesResponseType(typeof(PagedResult<ConsultaResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(PagedResponse<ConsultaResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<PagedResult<ConsultaResponse>>> GetAll([FromQuery] ConsultaFilter filter)
+    public async Task<ActionResult<PagedResponse<ConsultaResponse>>> GetAll([FromQuery] ConsultaFilter filter)
     {
-        var result = await _service.ListarAsync(filter);
-        return Ok(result with
-        {
-            Items = result.Items.Select(WithLinks).ToList(),
-            Links = Hateoas.Hateoas.PageLinks(Request, result)
-        });
+        var page = (await _service.ListarAsync(filter)).Map(WithLinks);
+        return Ok(PagedResponse<ConsultaResponse>.From(page, Hateoas.Hateoas.PageLinks(Request, page)));
     }
 
     /// <summary>Busca uma consulta pelo Id.</summary>

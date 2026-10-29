@@ -9,8 +9,8 @@ public abstract record ResourceBase
     public IReadOnlyList<Link> Links { get; init; } = Array.Empty<Link>();
 }
 
-/// <summary>Página de resultados com metadados de paginação.</summary>
-public record PagedResult<T>(IReadOnlyList<T> Items, int Page, int PageSize, int TotalCount) : ResourceBase
+/// <summary>Página de resultados com metadados de paginação (sem preocupação de apresentação).</summary>
+public record PagedResult<T>(IReadOnlyList<T> Items, int Page, int PageSize, int TotalCount)
 {
     public int TotalPages => PageSize <= 0 ? 0 : (int)Math.Ceiling(TotalCount / (double)PageSize);
 

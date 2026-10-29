@@ -28,16 +28,12 @@ public class PetController : ControllerBase
     /// <response code="200">Página de pets com links de navegação (HATEOAS).</response>
     /// <response code="400">Campo de ordenação inválido.</response>
     [HttpGet]
-    [ProducesResponseType(typeof(PagedResult<PetResponse>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(PagedResponse<PetResponse>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<PagedResult<PetResponse>>> GetAll([FromQuery] PetFilter filter)
+    public async Task<ActionResult<PagedResponse<PetResponse>>> GetAll([FromQuery] PetFilter filter)
     {
-        var result = await _service.ListarAsync(filter);
-        return Ok(result with
-        {
-            Items = result.Items.Select(WithLinks).ToList(),
-            Links = Hateoas.Hateoas.PageLinks(Request, result)
-        });
+        var page = (await _service.ListarAsync(filter)).Map(WithLinks);
+        return Ok(PagedResponse<PetResponse>.From(page, Hateoas.Hateoas.PageLinks(Request, page)));
     }
 
     /// <summary>Busca um pet pelo Id.</summary>

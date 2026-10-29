@@ -5,6 +5,8 @@ using PetCare.Application.Auditing;
 using PetCare.Application.Common;
 using PetCare.Application.DTOs;
 using Xunit;
+using PetCare.API.Hateoas;
+
 
 namespace PetCare.IntegrationTests;
 
@@ -12,6 +14,7 @@ namespace PetCare.IntegrationTests;
 public class PaginacaoHateoasTests
 {
     private readonly HttpClient _client;
+    
 
     public PaginacaoHateoasTests(CustomWebApplicationFactory factory)
     {
@@ -43,7 +46,8 @@ public class PaginacaoHateoasTests
 
         // Act
         var response = await _client.GetAsync($"/api/pet?tutorId={tutorId}&page=1&pageSize=2&sortBy=nome&sortDir=desc");
-        var pagina = await response.Content.ReadFromJsonAsync<PagedResult<PetResponse>>();
+        var pagina = await response.Content.ReadFromJsonAsync<PagedResponse<PetResponse>>();
+        var pagina2 = await _client.GetFromJsonAsync<PagedResponse<AuditLogEntry>>("/api/auditoria?entidade=Tutor&acao=Criacao");
 
         // Assert
         Assert.Equal(HttpStatusCode.OK, response.StatusCode);

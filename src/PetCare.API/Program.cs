@@ -113,11 +113,17 @@ builder.Services.AddHealthChecks()
 // ---------- OpenTelemetry (tracing + métricas Prometheus em /metrics) ----------
 builder.Services.AddOpenTelemetry()
     .ConfigureResource(resource => resource.AddService(ServiceName))
-    .WithTracing(tracing => tracing
-        .AddAspNetCoreInstrumentation()
-        .AddHttpClientInstrumentation()
-        .AddEntityFrameworkCoreInstrumentation()
-        .AddConsoleExporter())
+    .WithTracing(tracing =>
+    {
+        tracing
+            .AddAspNetCoreInstrumentation()
+            .AddHttpClientInstrumentation()
+            .AddEntityFrameworkCoreInstrumentation();
+
+        // Exporter de console só por configuração (útil para demonstrar tracing, ruidoso no dia a dia)
+        if (builder.Configuration.GetValue<bool>("OpenTelemetry:ConsoleExporter"))
+            tracing.AddConsoleExporter();
+    })
     .WithMetrics(metrics => metrics
         .AddAspNetCoreInstrumentation()
         .AddHttpClientInstrumentation()

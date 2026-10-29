@@ -27,11 +27,11 @@ public class AuditoriaController : ControllerBase
     /// <response code="200">Página de eventos de auditoria.</response>
     /// <response code="400">Campo de ordenação inválido.</response>
     [HttpGet]
-    [ProducesResponseType(typeof(PagedResult<AuditLogEntry>), StatusCodes.Status200OK)]
+    [ProducesResponseType(typeof(PagedResponse<AuditLogEntry>), StatusCodes.Status200OK)]
     [ProducesResponseType(StatusCodes.Status400BadRequest)]
-    public async Task<ActionResult<PagedResult<AuditLogEntry>>> GetAll([FromQuery] AuditLogFilter filter)
+    public async Task<ActionResult<PagedResponse<AuditLogEntry>>> GetAll([FromQuery] AuditLogFilter filter)
     {
-        var result = await _repository.GetPagedAsync(filter);
-        return Ok(result with { Links = Hateoas.Hateoas.PageLinks(Request, result) });
+        var page = await _repository.GetPagedAsync(filter);
+        return Ok(PagedResponse<AuditLogEntry>.From(page, Hateoas.Hateoas.PageLinks(Request, page)));
     }
 }
