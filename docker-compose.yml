@@ -1,4 +1,22 @@
 services:
+  oracle:
+    image: gvenzl/oracle-free:23-slim
+    container_name: petcare-oracle
+    environment:
+      ORACLE_PASSWORD: OraclePwd123      # senha do SYS/SYSTEM
+      APP_USER: petcare                  # usuário da aplicação (criado no FREEPDB1)
+      APP_USER_PASSWORD: PetCare123
+    ports:
+      - "1521:1521"
+    volumes:
+      - petcare-oracle-data:/opt/oracle/oradata
+    healthcheck:
+      test: ["CMD", "healthcheck.sh"]
+      interval: 10s
+      timeout: 5s
+      retries: 30
+      start_period: 30s
+
   mongo:
     image: mongo:7
     container_name: petcare-mongo
@@ -7,5 +25,24 @@ services:
     volumes:
       - petcare-mongo-data:/data/db
 
+  api:
+    build: .
+    container_name: petcare-api
+    depends_on:
+      oracle:
+        condition: service_healthy       # só sobe a API quando o Oracle aceita conexões
+      mongo:
+        condition: service_started
+    ports:
+      - "5080:8080"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Production
+      ConnectionStrings__OracleConnection: "User Id=petcare;Password=PetCare123;Data Source=oracle:1521/FREEPDB1"
+      Mongo__ConnectionString: "mongodb://mongo:27017"
+      Jwt__Key: "CHAVE-SOMENTE-PARA-DEMO-TROQUE-EM-PRODUCAO-0123456789"
+      Database__MigrateOnStartup: "true"
+      Swagger__Enabled: "true"
+
 volumes:
+  petcare-oracle-data:
   petcare-mongo-data:
