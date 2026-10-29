@@ -209,6 +209,17 @@ exceto `auth/*` e `health/*`.
 | GET | `/health`, `/health/live`, `/health/ready` | Saúde da API e das dependências | 200, 503 |
 | GET | `/metrics` | Métricas no formato Prometheus | 200 |
 
+| Exceção / situação | HTTP |
+|---|---|
+| Validação de DTO (DataAnnotations) | 400 (`errors` por campo) |
+| `ArgumentException` (ex.: campo de ordenação inválido) | 400 |
+| `DomainException` | 400 |
+| `AuthenticationFailedException` (login inválido) | 401 |
+| Token ausente / inválido / expirado | 401 |
+| `ResourceNotFoundException` / `KeyNotFoundException` | 404 |
+| `ConflictException` | 409 |
+| Qualquer outra | 500 (sem detalhes fora de Development) |
+
 Swagger UI disponível em `/swagger` (ambiente de desenvolvimento), com suporte a autenticação Bearer configurado via
 `AddSecurityDefinition`/`AddSecurityRequirement`.
 
