@@ -1,61 +1,64 @@
 Summary
-  Generated on: 27/10/2026 - 13:13:46
-  Coverage date: 27/10/2026 - 13:13:14 - 27/10/2026 - 13:13:20
-  Parser: MultiReport (3x Cobertura)
+  Generated on: 29/10/2026 - 15:55:53
+  Coverage date: 29/10/2026 - 15:55:29 - 29/10/2026 - 15:55:47
+  Parser: MultiReport (4x Cobertura)
   Assemblies: 2
-  Classes: 37
-  Files: 25
-  Line coverage: 88.1%
-  Covered lines: 326
-  Uncovered lines: 44
-  Coverable lines: 370
-  Total lines: 768
-  Branch coverage: 79.3% (46 of 58)
-  Covered branches: 46
-  Total branches: 58
-  Method coverage: 86.6% (117 of 135)
-  Full method coverage: 83.7% (113 of 135)
-  Covered methods: 117
-  Fully covered methods: 113
-  Total methods: 135
+  Classes: 40
+  Files: 27
+  Line coverage: 95%
+  Covered lines: 407
+  Uncovered lines: 21
+  Coverable lines: 428
+  Total lines: 878
+  Branch coverage: 91.8% (68 of 74)
+  Covered branches: 68
+  Total branches: 74
+  Method coverage: 95.6% (153 of 160)
+  Full method coverage: 93.1% (149 of 160)
+  Covered methods: 153
+  Fully covered methods: 149
+  Total methods: 160
 
-PetCare.Application                                     91.8%
-  PetCare.Application.Auditing.AuditLogEntry             100%
-  PetCare.Application.Auditing.AuditTrail                100%
-  PetCare.Application.Common.AuditLogFilter              100%
-  PetCare.Application.Common.ConsultaFilter              100%
-  PetCare.Application.Common.Filtros                     100%
-  PetCare.Application.Common.LembreteFilter              100%
-  PetCare.Application.Common.Link                        100%
-  PetCare.Application.Common.PagedResult<T>              100%
-  PetCare.Application.Common.PetFilter                   100%
-  PetCare.Application.Common.QueryParameters             100%
-  PetCare.Application.Common.ResourceBase                100%
-  PetCare.Application.Common.TutorFilter                 100%
-  PetCare.Application.DependencyInjection                100%
-  PetCare.Application.DTOs.ConsultaRequest               100%
-  PetCare.Application.DTOs.ConsultaResponse              100%
-  PetCare.Application.DTOs.LembreteRequest               100%
-  PetCare.Application.DTOs.LembreteResponse              100%
-  PetCare.Application.DTOs.LoginRequest                    0%
-  PetCare.Application.DTOs.LoginResponse                   0%
-  PetCare.Application.DTOs.PetRequest                    100%
-  PetCare.Application.DTOs.PetResponse                   100%
-  PetCare.Application.DTOs.RegisterRequest                 0%
-  PetCare.Application.DTOs.TutorRequest                  100%
-  PetCare.Application.DTOs.TutorResponse                 100%
-  PetCare.Application.Services.ConsultaService          81.5%
-  PetCare.Application.Services.LembreteService           100%
-  PetCare.Application.Services.PetService                100%
-  PetCare.Application.Services.TutorService               80%
+PetCare.Application                                         94.5%
+  PetCare.Application.Auditing.AuditLogEntry                 100%
+  PetCare.Application.Auditing.AuditTrail                    100%
+  PetCare.Application.Common.AuditLogFilter                  100%
+  PetCare.Application.Common.ConsultaFilter                  100%
+  PetCare.Application.Common.Filtros                         100%
+  PetCare.Application.Common.LembreteFilter                  100%
+  PetCare.Application.Common.Link                            100%
+  PetCare.Application.Common.PagedResult<T>                  100%
+  PetCare.Application.Common.PetFilter                       100%
+  PetCare.Application.Common.QueryParameters                 100%
+  PetCare.Application.Common.ResourceBase                    100%
+  PetCare.Application.Common.TutorFilter                     100%
+  PetCare.Application.DependencyInjection                    100%
+  PetCare.Application.DTOs.ConsultaRequest                   100%
+  PetCare.Application.DTOs.ConsultaResponse                  100%
+  PetCare.Application.DTOs.LembreteRequest                   100%
+  PetCare.Application.DTOs.LembreteResponse                  100%
+  PetCare.Application.DTOs.LoginRequest                      100%
+  PetCare.Application.DTOs.LoginResponse                     100%
+  PetCare.Application.DTOs.PetRequest                        100%
+  PetCare.Application.DTOs.PetResponse                       100%
+  PetCare.Application.DTOs.RegisterRequest                   100%
+  PetCare.Application.DTOs.RegisterResponse                  100%
+  PetCare.Application.DTOs.TutorRequest                      100%
+  PetCare.Application.DTOs.TutorResponse                     100%
+  PetCare.Application.Services.AuthService                   100%
+  PetCare.Application.Services.ConsultaService              82.9%
+  PetCare.Application.Services.LembreteService               100%
+  PetCare.Application.Services.PetService                    100%
+  PetCare.Application.Services.TutorService                   80%
 
-PetCare.Domain                                          82.6%
-  PetCare.Domain.Common.BaseEntity                       100%
-  PetCare.Domain.Entities.Consulta                      90.4%
-  PetCare.Domain.Entities.Lembrete                      93.3%
-  PetCare.Domain.Entities.Pet                             93%
-  PetCare.Domain.Entities.Tutor                           97%
-  PetCare.Domain.Entities.Usuario                          0%
-  PetCare.Domain.Exceptions.ConflictException            100%
-  PetCare.Domain.Exceptions.DomainException              100%
-  PetCare.Domain.Exceptions.ResourceNotFoundException    100%
+PetCare.Domain                                                96%
+  PetCare.Domain.Common.BaseEntity                           100%
+  PetCare.Domain.Entities.Consulta                          95.2%
+  PetCare.Domain.Entities.Lembrete                          96.6%
+  PetCare.Domain.Entities.Pet                                 93%
+  PetCare.Domain.Entities.Tutor                               97%
+  PetCare.Domain.Entities.Usuario                            100%
+  PetCare.Domain.Exceptions.AuthenticationFailedException    100%
+  PetCare.Domain.Exceptions.ConflictException                100%
+  PetCare.Domain.Exceptions.DomainException                  100%
+  PetCare.Domain.Exceptions.ResourceNotFoundException        100%
